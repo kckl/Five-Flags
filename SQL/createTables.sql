@@ -54,5 +54,11 @@ CREATE TABLE Park_Category_Name (
 )
 
 -- Chris: #5-10
+-- test
+CREATE TABLE Staff_ID (
+    ID int,
+    Role varchar(20),
+    PRIMARY KEY (ID)
+);
 
 -- Kirby: #11-17
