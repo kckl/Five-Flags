@@ -101,8 +101,8 @@ INSERT INTO Type_Price VALUES('1-Month Pass', 249.99);
 INSERT INTO Type_Price VALUES('1-Week Pass', 179.99);
 INSERT INTO Type_Price VALUES('1-Day Pass', 119.99);
 
-INSERT INTO Type_Ticket_Date_Park VALUES();
-INSERT INTO Type_Ticket_Date_Park VALUES();
-INSERT INTO Type_Ticket_Date_Park VALUES();
-INSERT INTO Type_Ticket_Date_Park VALUES();
-INSERT INTO Type_Ticket_Date_Park VALUES();
+INSERT INTO GuestVisit VALUES(10001, '1-Day Pass', '2022-12-31', 11111, 1);
+INSERT INTO GuestVisit VALUES(10002, 'Annual-Unlimited', '2022-07-25', 33333, 2);
+INSERT INTO GuestVisit VALUES(10003, '1-Month Pass', '2022-01-01', 44444, 2);
+INSERT INTO GuestVisit VALUES(10004, '1-Week Pass', '2022-09-30', 22222, 3);
+INSERT INTO GuestVisit VALUES(10005, 'Annual-Unlimited', '2022-05-20', 55555, 4);

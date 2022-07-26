@@ -13,43 +13,43 @@ CREATE TABLE Staff_ID (
 );
 
 CREATE TABLE Hotel_Price (
-    Price int
-    Brand varchar(20)
-    Proximity int
+    Price int,
+    Brand varchar(20),
+    Proximity int,
     PRIMARY KEY (brand, Proximity)
 );
 
 CREATE TABLE Hotel_Address (
-    Address varchar(30)
-    Brand varchar(20)
-    Proximity int
-    Park_ID int
-    PRIMARY KEY (Address)
+    Address varchar(30),
+    Brand varchar(20),
+    Proximity int,
+    Park_ID int,
+    PRIMARY KEY (Address),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
-CREATE TABLE GUEST (
-    ID int
-    Name varchar(20)
-    Age int
-    Address varchar(30)
-    Email varchar(20)
-    Credit_Card BIGINT
+CREATE TABLE Guest (
+    ID int,
+    Name varchar(20),
+    Age int,
+    Address varchar(30),
+    Email varchar(20),
+    Credit_Card BIGINT,
     PRIMARY KEY (ID)
 );
 
 CREATE TABLE Park_Hours (
-    Park_ID int
-    Hours varchar(20)
-    PRIMARY KEY (Park_ID)
+    Park_ID int,
+    Hours varchar(20),
+    PRIMARY KEY (Park_ID),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
 CREATE TABLE Park_Category_Name (
-    Park_ID int
-    Category varchar(20)
-    Name varchar(20)
-    PRIMARY KEY (Park_ID)
+    Park_ID int,
+    Category varchar(20),
+    Name varchar(20),
+    PRIMARY KEY (Park_ID),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
@@ -67,22 +67,15 @@ CREATE TABLE Type_Price (
     PRIMARY KEY (Type)
 );
 
-CREATE TABLE Type_Ticket_Date_Park (
-    Type varchar(20),
+CREATE TABLE GuestVisit (
     TicketID int,
+    Type varchar(20),
     Date date,
-    Park_ID int NOT NULL,
-    PRIMARY KEY (Type),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
-);
-
-CREATE TABLE Type_Ticket_Date_Guest (
-    Type varchar(20),
-    TicketID int,
-    Date DATE,
     Guest_ID int NOT NULL,
-    PRIMARY KEY (Type),
-    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID)
+    Park_ID int NOT NULL,
+    PRIMARY KEY (TicketID),
+    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID),
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
 CREATE TABLE Dining_Offer (
