@@ -40,6 +40,48 @@ INSERT INTO Park_Category_Name VALUES(3, 'Bank', 'Gringotts')
 INSERT INTO Park_Category_Name VALUES(4, 'Chocolates', 'Wonka Industries')
 INSERT INTO Park_Category_Name VALUES(5, 'General', 'Walmart')
 
+-- #6-10
+INSERT INTO Park VALUES(1, 'Las Vegas', 'USA');
+INSERT INTO Park VALUES(2, 'Dubai', 'UAE');
+INSERT INTO Park VALUES(3, 'Vancouver', 'Canada');
+INSERT INTO Park VALUES(4, 'Lima', 'Peru');
+INSERT INTO Park VALUES(5, 'Berlin', 'Germany');
+
+INSERT INTO Type_Price VALUES('Annual-Unlimited', 1399.99);
+INSERT INTO Type_Price VALUES('Annual-Limited', 949.99);
+INSERT INTO Type_Price VALUES('1-Month Pass', 249.99);
+INSERT INTO Type_Price VALUES('1-Week Pass', 179.99);
+INSERT INTO Type_Price VALUES('1-Day Pass', 119.99);
+
+INSERT INTO GuestVisit VALUES(10001, '1-Day Pass', '2022-12-31', 11111, 1);
+INSERT INTO GuestVisit VALUES(10002, 'Annual-Unlimited', '2022-07-25', 33333, 2);
+INSERT INTO GuestVisit VALUES(10003, '1-Month Pass', '2022-01-01', 44444, 2);
+INSERT INTO GuestVisit VALUES(10004, '1-Week Pass', '2022-09-30', 22222, 3);
+INSERT INTO GuestVisit VALUES(10005, 'Annual-Unlimited', '2022-05-20', 55555, 4);
+
+INSERT INTO Dining_Offer VALUES('The Keg', '$$$$', 1);
+INSERT INTO Dining_Offer VALUES('Trader Flags Lounge', '$$', 2);
+INSERT INTO Dining_Offer VALUES('Din Tai Fung', '$$$', 4);
+INSERT INTO Dining_Offer VALUES('Munchu Picchu', '$$$', 5);
+INSERT INTO Dining_Offer VALUES('Deutsches Haus', '$$$$', 3);
+INSERT INTO Dining_Offer VALUES('Corn Dog Castle', '$', 2);
+INSERT INTO Dining_Offer VALUES('Popcorn Kitchen', '$', 2);
+INSERT INTO Dining_Offer VALUES('5 Flags Express', '$$', 1);
+INSERT INTO Dining_Offer VALUES('The Confectionary', '$$', 3);
+INSERT INTO Dining_Offer VALUES('Burger Queen', '$', 4);
+
+INSERT INTO Restaurant VALUES('The Keg', 100, 'American');
+INSERT INTO Restaurant VALUES('Trader Flags Lounge', 250, 'Hawaiian');
+INSERT INTO Restaurant VALUES('Din Tai Fung', 150, 'Chinese');
+INSERT INTO Restaurant VALUES('Munchu Picchu', 50, 'Peruvian');
+INSERT INTO Restaurant VALUES('Deutsches Haus', 150, 'German');
+
+INSERT INTO FastFood VALUES('Corn Dog Castle', 'Snacks');
+INSERT INTO FastFood VALUES('Popcorn Kitchen', 'Snacks');
+INSERT INTO FastFood VALUES('5 Flags Express', 'Dessert');
+INSERT INTO FastFood VALUES('The Confectionary', 'Ice Cream');
+INSERT INTO FastFood VALUES('Burger Queen', 'Burgers');
+
 -- #11-17
 INSERT INTO Stay VALUES(11111, "123 Dubai Street", "1997-01-01", "1998-01-01");
 INSERT INTO Stay VALUES(22222, "456 Las Vegas Road", "2030-03-03", "2030-03-12");
@@ -88,21 +130,3 @@ INSERT INTO Ride_Info(8, 30, "Matterhorn Bobsleds", 2);
 INSERT INTO Ride_Info(1, 20, "Jungle Cruise", 3);
 INSERT INTO Ride_Info(6, 10, "Radiator Springs", 4);
 INSERT INTO Ride_Info(2, 15, "Peter Pan's Flight", 5);
-
-INSERT INTO Park VALUES(1, 'Las Vegas', 'USA');
-INSERT INTO Park VALUES(2, 'Dubai', 'UAE');
-INSERT INTO Park VALUES(3, 'Vancouver', 'Canada');
-INSERT INTO Park VALUES(4, 'Lima', 'Peru');
-INSERT INTO Park VALUES(5, 'Berlin', 'Germany');
-
-INSERT INTO Type_Price VALUES('Annual-Unlimited', 1399.99);
-INSERT INTO Type_Price VALUES('Annual-Limited', 949.99);
-INSERT INTO Type_Price VALUES('1-Month Pass', 249.99);
-INSERT INTO Type_Price VALUES('1-Week Pass', 179.99);
-INSERT INTO Type_Price VALUES('1-Day Pass', 119.99);
-
-INSERT INTO GuestVisit VALUES(10001, '1-Day Pass', '2022-12-31', 11111, 1);
-INSERT INTO GuestVisit VALUES(10002, 'Annual-Unlimited', '2022-07-25', 33333, 2);
-INSERT INTO GuestVisit VALUES(10003, '1-Month Pass', '2022-01-01', 44444, 2);
-INSERT INTO GuestVisit VALUES(10004, '1-Week Pass', '2022-09-30', 22222, 3);
-INSERT INTO GuestVisit VALUES(10005, 'Annual-Unlimited', '2022-05-20', 55555, 4);
