@@ -1,3 +1,5 @@
+-- Charlie: #1-5
+
 CREATE TABLE Staff_Wage (
     Wage int,
     Role varchar(20),
@@ -11,3 +13,6 @@ CREATE TABLE Staff_ID (
 );
 
 
+-- Chris: #5-10
+
+-- Kirby: #11-17
