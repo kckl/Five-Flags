@@ -4,6 +4,7 @@ INSERT INTO Staff_Wage VALUES(50, 'Janitor')
 INSERT INTO Staff_Wage VALUES(15, 'Janitor')
 INSERT INTO Staff_Wage VALUES(100, 'Janitor')
 
+<<<<<<< HEAD
 
 
 -- #11-17
@@ -54,3 +55,22 @@ INSERT INTO Ride_Info(8, 30, "Matterhorn Bobsleds", 2);
 INSERT INTO Ride_Info(1, 20, "Jungle Cruise", 3);
 INSERT INTO Ride_Info(6, 10, "Radiator Springs", 4);
 INSERT INTO Ride_Info(2, 15, "Peter Pan's Flight", 5);
+=======
+INSERT INTO Park VALUES(1, 'Las Vegas', 'USA');
+INSERT INTO Park VALUES(2, 'Dubai', 'UAE');
+INSERT INTO Park VALUES(3, 'Vancouver', 'Canada');
+INSERT INTO Park VALUES(4, 'Lima', 'Peru');
+INSERT INTO Park VALUES(5, 'Berlin', 'Germany');
+
+INSERT INTO Type_Price VALUES('Annual-Unlimited', 1399.99);
+INSERT INTO Type_Price VALUES('Annual-Limited', 949.99);
+INSERT INTO Type_Price VALUES('1-Month Pass', 249.99);
+INSERT INTO Type_Price VALUES('1-Week Pass', 179.99);
+INSERT INTO Type_Price VALUES('1-Day Pass', 119.99);
+
+INSERT INTO Type_Ticket_Date_Park VALUES();
+INSERT INTO Type_Ticket_Date_Park VALUES();
+INSERT INTO Type_Ticket_Date_Park VALUES();
+INSERT INTO Type_Ticket_Date_Park VALUES();
+INSERT INTO Type_Ticket_Date_Park VALUES();
+>>>>>>> 3392ee64a4d5f43d78103b058a6f5090072f3d55
