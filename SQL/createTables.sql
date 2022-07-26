@@ -1,10 +1,10 @@
-CREATE TABLE Staff1 (
+CREATE TABLE StaffWage (
     Wage int,
     Role varchar(20),
     PRIMARY KEY (Role)
 );
 
-CREATE TABLE Staff2 (
+CREATE TABLE StaffID (
     ID int,
     Role varchar(20),
     PRIMARY KEY (ID)
