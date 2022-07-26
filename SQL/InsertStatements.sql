@@ -1,5 +1,4 @@
 INSERT INTO Staff_Wage VALUES(20, 'Janitor')
-<<<<<<< HEAD
 INSERT INTO Staff_Wage VALUES(25, 'Concessions')
 INSERT INTO Staff_Wage VALUES(50, 'Manager')
 INSERT INTO Staff_Wage VALUES(15, 'Intern')
@@ -40,14 +39,6 @@ INSERT INTO Park_Category_Name VALUES(2, 'Umbrellas', 'Umbrella Corp.')
 INSERT INTO Park_Category_Name VALUES(3, 'Bank', 'Gringotts')
 INSERT INTO Park_Category_Name VALUES(4, 'Chocolates', 'Wonka Industries')
 INSERT INTO Park_Category_Name VALUES(5, 'General', 'Walmart')
-=======
-INSERT INTO Staff_Wage VALUES(25, 'Janitor')
-INSERT INTO Staff_Wage VALUES(50, 'Janitor')
-INSERT INTO Staff_Wage VALUES(15, 'Janitor')
-INSERT INTO Staff_Wage VALUES(100, 'Janitor')
-
-<<<<<<< HEAD
-
 
 -- #11-17
 INSERT INTO Stay VALUES(11111, "123 Dubai Street", "1997-01-01", "1998-01-01");
@@ -97,7 +88,7 @@ INSERT INTO Ride_Info(8, 30, "Matterhorn Bobsleds", 2);
 INSERT INTO Ride_Info(1, 20, "Jungle Cruise", 3);
 INSERT INTO Ride_Info(6, 10, "Radiator Springs", 4);
 INSERT INTO Ride_Info(2, 15, "Peter Pan's Flight", 5);
-=======
+
 INSERT INTO Park VALUES(1, 'Las Vegas', 'USA');
 INSERT INTO Park VALUES(2, 'Dubai', 'UAE');
 INSERT INTO Park VALUES(3, 'Vancouver', 'Canada');
@@ -115,5 +106,3 @@ INSERT INTO Type_Ticket_Date_Park VALUES();
 INSERT INTO Type_Ticket_Date_Park VALUES();
 INSERT INTO Type_Ticket_Date_Park VALUES();
 INSERT INTO Type_Ticket_Date_Park VALUES();
->>>>>>> 3392ee64a4d5f43d78103b058a6f5090072f3d55
->>>>>>> 9de583ae220b56cdc1f76a89728eb786a866fa53
