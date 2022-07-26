@@ -101,5 +101,11 @@ CREATE TABLE Restaurant (
     FOREIGN KEY (Name) REFERENCES Dining_Offer(Name)
 );
 
+CREATE TABLE FastFood (
+    Name varchar(30),
+    Type varchar(20),
+    PRIMARY KEY (Name),
+    FOREIGN KEY (Name) REFERENCES Dining_Offer(Name)
+);
 
 -- Kirby: #11-17
