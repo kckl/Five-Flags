@@ -1,0 +1,5 @@
+INSERT INTO Staff_Wage VALUES(20, 'Janitor')
+INSERT INTO Staff_Wage VALUES(25, 'Janitor')
+INSERT INTO Staff_Wage VALUES(50, 'Janitor')
+INSERT INTO Staff_Wage VALUES(15, 'Janitor')
+INSERT INTO Staff_Wage VALUES(100, 'Janitor')
