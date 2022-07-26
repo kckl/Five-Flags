@@ -1,4 +1,5 @@
 # Five Flags 🎡
 
 CPSC 304 Project
-123
+
+latest update: finished tables 1-4
