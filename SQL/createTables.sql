@@ -62,13 +62,13 @@ CREATE TABLE Park (
 );
 
 CREATE TABLE Type_Price (
-    Type varchar(10),
+    Type varchar(20),
     Price decimal(10,2),
     PRIMARY KEY (Type)
 );
 
 CREATE TABLE Type_Ticket_Date_Park (
-    Type varchar(10),
+    Type varchar(20),
     TicketID int,
     Date date,
     Park_ID int NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE Type_Ticket_Date_Park (
 );
 
 CREATE TABLE Type_Ticket_Date_Guest (
-    Type varchar(10),
+    Type varchar(20),
     TicketID int,
     Date DATE,
     Guest_ID int NOT NULL,
