@@ -1,8 +1,8 @@
 -- Charlie: #1-5
 
 CREATE TABLE Staff_Wage (
-    Wage int,
     Role varchar(20),
+    Wage int,
     PRIMARY KEY (Role)
 );
 
@@ -12,16 +12,10 @@ CREATE TABLE Staff_ID (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Hotel_Price (
-    Price int,
-    Brand varchar(20),
-    Proximity int,
-    PRIMARY KEY (brand, Proximity)
-);
-
-CREATE TABLE Hotel_Address (
+CREATE TABLE Hotel_LocatedNear (
     Address varchar(30),
     Brand varchar(20),
+    Price varchar(10),
     Proximity int,
     Park_ID int,
     PRIMARY KEY (Address),
@@ -33,7 +27,7 @@ CREATE TABLE Guest (
     Name varchar(20),
     Age int,
     Address varchar(30),
-    Email varchar(20),
+    Email varchar(50),
     Credit_Card BIGINT,
     PRIMARY KEY (ID)
 );
@@ -45,11 +39,11 @@ CREATE TABLE Park_Hours (
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
-CREATE TABLE Park_Category_Name (
-    Park_ID int,
-    Category varchar(20),
+CREATE TABLE Shop_Category (
     Name varchar(20),
-    PRIMARY KEY (Park_ID),
+    Category varchar(20),
+    Park_ID int NOT NULL,
+    PRIMARY KEY (Name),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
 
@@ -67,7 +61,7 @@ CREATE TABLE Type_Price (
     PRIMARY KEY (Type)
 );
 
-CREATE TABLE GuestVisit (
+CREATE TABLE Guest_Visit (
     TicketID int,
     Type varchar(20),
     Date date,
@@ -80,7 +74,7 @@ CREATE TABLE GuestVisit (
 
 CREATE TABLE Dining_Offer (
     Name varchar(30),
-    Price decimal(10,2),
+    Price varchar(10),
     Park_ID int NOT NULL,
     PRIMARY KEY (Name),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
@@ -109,7 +103,7 @@ CREATE TABLE Stay (
     EndDate date,
     PRIMARY KEY (Guest_ID, Hotel_Address),
     FOREIGN KEY (Guest_ID) REFERENCES Guest(ID),
-    FOREIGN KEY (Hotel_Address) REFERENCES Hotel(Address)
+    FOREIGN KEY (Hotel_Address) REFERENCES Hotel_LocatedNear(Address)
 );
 
 CREATE TABLE Shop (
@@ -117,7 +111,7 @@ CREATE TABLE Shop (
     Shop_Name varchar(20),
     PRIMARY KEY (Guest_ID, Shop_Name),
     FOREIGN KEY (Guest_ID) REFERENCES Guest(ID),
-    FOREIGN KEY (Shop_Name) REFERENCES Park_Category_Name (Name)
+    FOREIGN KEY (Shop_Name) REFERENCES Shop_Category(Name)
 );
 
 CREATE TABLE Enjoy (
@@ -126,8 +120,7 @@ CREATE TABLE Enjoy (
     Park_ID int,
     PRIMARY KEY (Guest_ID, Ride_Name, Park_ID),
     FOREIGN KEY (Guest_ID) REFERENCES Guest(ID),
-    FOREIGN KEY (Ride_Name) REFERENCES Ride_In(Name),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
+    FOREIGN KEY (Ride_Name, Park_ID) REFERENCES Ride_Info(Name, Park_ID)
 );
 
 CREATE TABLE Dines (
@@ -162,10 +155,10 @@ CREATE TABLE Ride_Restriction (
 );
 
 CREATE TABLE Ride_Info (
-    Thrill_Level int,
-    Capacity int,
     Name varchar(20),
     Park_ID int,
+    Thrill_Level int,
+    Capacity int,
     PRIMARY KEY (Name, Park_ID),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
