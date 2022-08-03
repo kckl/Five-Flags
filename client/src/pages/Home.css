@@ -1,0 +1,11 @@
+h1 {
+    margin: 1em auto;
+}
+
+body { 
+    text-align: center;
+}
+
+.buttons {
+    display: inline-block;
+}

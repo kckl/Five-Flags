@@ -1,4 +1,5 @@
 .App {
+  font-family: 'Roboto';
   text-align: center;
 }
 
@@ -35,4 +36,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  background: rgb(216,234,244);
 }
