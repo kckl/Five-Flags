@@ -8,6 +8,7 @@ CREATE TABLE Staff_Wage (
 
 CREATE TABLE Staff_ID (
     ID SERIAL,
+    Name varchar(30),
     Role varchar(20),
     PRIMARY KEY (ID)
 );

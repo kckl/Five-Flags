@@ -5,4 +5,10 @@ const getStaff = async (req, res) => {
     res.json(allStaff.rows);
 };
 
-module.exports = { getStaff };
+const addStaff = async (req, res) => {
+    const { name, role } = req.body;
+    const addStaff = await pool.query("INSERT INTO Staff_ID(Name, Role) VALUES($1, $2)", [name, role]);
+    res.json(addStaff.rows[0]);
+};
+
+module.exports = { getStaff, addStaff };

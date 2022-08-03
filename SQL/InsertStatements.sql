@@ -4,11 +4,11 @@ INSERT INTO Staff_Wage VALUES('Manager', 50);
 INSERT INTO Staff_Wage VALUES('Intern', 15);
 INSERT INTO Staff_Wage VALUES('CEO', 100);
 
-INSERT INTO Staff_ID(Role) VALUES('CEO'); 
-INSERT INTO Staff_ID(Role) VALUES('Manager'); 
-INSERT INTO Staff_ID(Role) VALUES('Concessions'); 
-INSERT INTO Staff_ID(Role) VALUES('Janitor'); 
-INSERT INTO Staff_ID(Role) VALUES('Intern'); 
+INSERT INTO Staff_ID(Name, Role) VALUES('John McDonald', 'CEO'); 
+INSERT INTO Staff_ID(Name, Role) VALUES('Betty Capinski', 'Manager'); 
+INSERT INTO Staff_ID(Name, Role) VALUES('Martjin Miller', 'Concessions'); 
+INSERT INTO Staff_ID(Name, Role) VALUES('Tij Ingrosso', 'Janitor'); 
+INSERT INTO Staff_ID(Name, Role) VALUES('Joe Schmoe', 'Intern'); 
 
 INSERT INTO Park VALUES(1, 'Las Vegas', 'USA');
 INSERT INTO Park VALUES(2, 'Dubai', 'UAE');
