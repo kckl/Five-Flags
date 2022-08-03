@@ -1,4 +1,4 @@
--- Charlie: #1-5
+CREATE DATABASE fiveflags;
 
 CREATE TABLE Staff_Wage (
     Role varchar(20),
@@ -7,8 +7,15 @@ CREATE TABLE Staff_Wage (
 );
 
 CREATE TABLE Staff_ID (
-    ID int,
+    ID SERIAL,
     Role varchar(20),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Park (
+    ID int,
+    City varchar(20),
+    Country varchar(20),
     PRIMARY KEY (ID)
 );
 
@@ -45,14 +52,6 @@ CREATE TABLE Shop_Category (
     Park_ID int NOT NULL,
     PRIMARY KEY (Name),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
-);
-
--- Chris: #6-10
-CREATE TABLE Park (
-    ID int,
-    City varchar(20),
-    Country varchar(20),
-    PRIMARY KEY (ID)
 );
 
 CREATE TABLE Type_Price (
@@ -95,7 +94,22 @@ CREATE TABLE FastFood (
     FOREIGN KEY (Name) REFERENCES Dining_Offer(Name)
 );
 
--- Kirby: #11-17
+CREATE TABLE Ride_Restriction (
+    Thrill_Level int,
+    Capacity int,
+    Restrictions varchar(50),
+    PRIMARY KEY (Thrill_Level, Capacity)
+);
+
+CREATE TABLE Ride_Info (
+    Name varchar(20),
+    Park_ID int,
+    Thrill_Level int,
+    Capacity int,
+    PRIMARY KEY (Name, Park_ID),
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
+);
+
 CREATE TABLE Stay (
     Guest_ID int,
     Hotel_Address varchar(30),
@@ -144,21 +158,5 @@ CREATE TABLE Works_For (
     Park_ID int,
     PRIMARY KEY (Staff_ID, Park_ID),
     FOREIGN KEY (Staff_ID) REFERENCES Staff_ID(ID),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
-);
-
-CREATE TABLE Ride_Restriction (
-    Thrill_Level int,
-    Capacity int,
-    Restrictions varchar(50),
-    PRIMARY KEY (Thrill_Level, Capacity)
-);
-
-CREATE TABLE Ride_Info (
-    Name varchar(20),
-    Park_ID int,
-    Thrill_Level int,
-    Capacity int,
-    PRIMARY KEY (Name, Park_ID),
     FOREIGN KEY (Park_ID) REFERENCES Park(ID)
 );
