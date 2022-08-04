@@ -17,7 +17,7 @@ const Home = () => {
                             <button type="button" onClick>Guest</button>
                         </Link>
                         <span> or a </span>
-                        <Link to="/StaffLogin">
+                        <Link to="/StaffView">
                             <button type="button" onClick>Staff</button>
                         </Link>
                         <span> ?</span>

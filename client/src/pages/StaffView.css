@@ -1,0 +1,25 @@
+.page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    background-image: url("../images/OpaqueWalt.png");
+    background-color: white;
+    background-size: cover;
+}
+
+.header  {
+    margin: 30px;
+}
+
+h1 {
+    display: inline;
+}
+
+.small-logo {
+    max-width: 80px;
+    max-height: 80px;
+    float: right;
+}
