@@ -1,0 +1,13 @@
+body {
+    text-align: left;
+    background-image: url("../images/OpaqueWalt.png");
+    background-color: white;
+    background-size: cover;
+    background-repeat: no repeat;
+}
+
+h2 {
+    top: 0;
+    left: 0; 
+    
+}
