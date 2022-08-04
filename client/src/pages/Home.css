@@ -1,4 +1,5 @@
 body {
+    font-family: 'Exo', sans-serif;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
@@ -13,9 +14,12 @@ body {
 }
 
 .container {
-    height: 800px;
-    width: 800px;
-    margin-right: -5px;
+    height: auto;
+    width: auto;
+    max-width: 800px;
+    max-height: 800px;
+    margin: -5px;
+    align-items: center;
 }
 
 img {
@@ -26,13 +30,17 @@ img {
 }
 
 h1 {
-    margin: 1em auto;
+    margin: 0.75em auto;
 }
 
 body { 
     text-align: center;
 }
 
-.buttons {
+.buttons button {
     display: inline-block;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 15px;
 }

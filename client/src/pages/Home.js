@@ -10,8 +10,9 @@ const Home = () => {
                 <div className="container">
                     <img src={img} alt="company logo"></img>
                     <h1>Welcome to Five Flags!</h1>
+                    <p>We are looking forward to welcoming you on your next vacation!</p>
                     <div className="buttons">
-                        <span>Are you a </span>
+                        <span>To begin, are you a </span>
                         <Link to="/GuestView">
                             <button type="button" onClick>Guest</button>
                         </Link>
