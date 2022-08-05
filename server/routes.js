@@ -35,4 +35,4 @@ const deleteRide = async (req, res) => {
     res.json(`The ride ${name} at park #${parkid} was deleted!`);
 };
 
-module.exports = { getStaff, addStaff, deleteStaff, getRides, deleteRide };
+module.exports = { getShop, getStaff, addStaff, deleteStaff, getRides, deleteRide };
