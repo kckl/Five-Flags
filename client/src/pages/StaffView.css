@@ -5,9 +5,9 @@
     width: 100%;
     height: 100vh;
     text-align: left;
-    background-image: url("../images/OpaqueWalt.png");
+    background-image: url("../images/WaltOpaque.png");
     background-color: white;
-    background-size: cover;
+    background-size: auto;
 }
 
 .header  {

@@ -78,7 +78,7 @@ CREATE TABLE Dining_Offer (
     Price varchar(10),
     Park_ID int NOT NULL,
     PRIMARY KEY (Name),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Restaurant (

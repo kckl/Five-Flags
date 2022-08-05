@@ -1,11 +1,13 @@
 .box-container {
     background-color: rgb(250, 250, 250);
+    opacity: 80%;
     margin: 30px;
-    height: 100px;
+    height: auto;
     width: 50%;
     border-radius: 20px;
     align-items: center;
     box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
 }
 
 .text-container {
@@ -33,4 +35,5 @@ input[type="submit"] {
     border: 1px solid black;
     text-align: center;
     font-size: 15px;
+    float: right;
 }

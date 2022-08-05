@@ -5,6 +5,16 @@ const getStaff = async (req, res) => {
     res.json(allStaff.rows);
 };
 
+const getRides = async (req, res) => {
+    const allRides = await pool.query("SELECT * FROM Ride_Info ORDER BY Name ASC, Park_ID ASC");
+    res.json(allRides.rows);
+};
+
+const getParks = async (req, res) => {
+    const allParks = await pool.query("SELECT * FROM Park");
+    res.json(allParks.rows);
+};
+
 const addStaff = async (req, res) => {
     const { name, role } = req.body;
     const addStaff = await pool.query("INSERT INTO Staff_ID(Name, Role) VALUES($1, $2)", [name, role]);
@@ -17,15 +27,23 @@ const deleteStaff = async (req, res) => {
     res.json(`Staff #${id} was deleted!`);
 };
 
-const getRides = async (req, res) => {
-    const allRides = await pool.query("SELECT * FROM Ride_Info");
-    res.json(allRides.rows);
-};
-
 const deleteRide = async (req, res) => {
-    const { name, parkid } = req.params;
-    const ride = await pool.query("DELETE FROM Ride_Info WHERE Name = $1 AND Park_ID = $2", [name, parkid]);
-    res.json(`The ride ${name} at park #${parkid} was deleted!`);
+    const parkid = parseInt(req.params.parkid);
+    const name = req.params.name;
+    const ride = await pool.query("DELETE FROM Ride_Info WHERE Park_ID = $1 AND Name = $2", [parkid, name]);
+    res.json(`${name} at park #${parkid} was deleted!`);
 };
 
-module.exports = { getStaff, addStaff, deleteStaff, getRides, deleteRide };
+const deletePark = async (req, res) => {
+    const { id } = req.params;
+    const park = await pool.query("DELETE FROM Park WHERE ID = $1", [id]);
+    res.json(`Park #${id} was deleted!`);
+};
+
+const deleteFood = async (req, res) => {
+    const name = req.params.name;
+    const ride = await pool.query("DELETE FROM Dining_Offer WHERE Name = $1", [name]);
+    res.json(`${name} was deleted!`);
+};
+
+module.exports = { getStaff, getRides, getParks, addStaff, deleteStaff, deleteRide, deletePark, deleteFood };

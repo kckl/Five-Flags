@@ -9,11 +9,14 @@ app.use(express.json());
 
 app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
+app.get("/parks", routes.getParks);
 
 app.post("/staff", routes.addStaff);
 
 app.delete("/staff/:id", routes.deleteStaff);
-app.delete("/rides/:ridename/:parkid", routes.deleteRide);
+app.delete("/rides/:parkid/:name", routes.deleteRide);
+app.delete("/parks/:id", routes.deletePark);
+app.delete("/dining/:name", routes.deleteFood);
 
 const PORT = 8000;
 app.listen(PORT, () => {
