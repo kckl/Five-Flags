@@ -1,5 +1,12 @@
 const pool = require("./db");
 
+// GUEST VIEW
+const getShop = async (req, res) => {
+    const allShop = await pool.query("SELECT * FROM Shop_Category");
+    res.json(allShop.rows);
+};
+
+// STAFF VIEW
 const getStaff = async (req, res) => {
     const allStaff = await pool.query("SELECT * FROM Staff_ID");
     res.json(allStaff.rows);
@@ -11,4 +18,4 @@ const addStaff = async (req, res) => {
     res.json(addStaff.rows[0]);
 };
 
-module.exports = { getStaff, addStaff };
+module.exports = { getShop, getStaff, addStaff };

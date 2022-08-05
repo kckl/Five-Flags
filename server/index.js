@@ -6,11 +6,13 @@ const routes = require("./routes");
 app.use(cors());
 app.use(express.json());
 
+// GUEST VIEW
+app.get("/guest", routes.getShop);
 
+// STAFF VIEW
 app.get("/staff", routes.getStaff);
 
-// insert operation
-app.post("/staff", routes.addStaff);
+app.post("/staff", routes.addStaff);  // insert operation
 
 const PORT = 8000;
 app.listen(PORT, () => {
