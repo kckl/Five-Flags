@@ -20,8 +20,10 @@ const GetShop = () => {
         getShops();
     }, []);
 
+
     return (
         <>
+        
         {" "}
             <table className="table table-hover">
                 <thead>
