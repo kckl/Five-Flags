@@ -108,7 +108,7 @@ CREATE TABLE Ride_Info (
     Thrill_Level int,
     Capacity int,
     PRIMARY KEY (Name, Park_ID),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Stay (

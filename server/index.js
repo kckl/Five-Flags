@@ -11,8 +11,12 @@ app.get("/guest", routes.getShop);
 
 // STAFF VIEW
 app.get("/staff", routes.getStaff);
+app.get("/rides", routes.getRides);
 
-app.post("/staff", routes.addStaff);  // insert operation
+app.post("/staff", routes.addStaff);
+
+app.delete("/staff/:id", routes.deleteStaff);
+app.delete("/rides/:ridename/:parkid", routes.deleteRide);
 
 const PORT = 8000;
 app.listen(PORT, () => {

@@ -1,5 +1,8 @@
+// insert operation - add new staff
+
 import React, { useState } from "react";
 import './AddStaff.css';
+const url = "http://localhost:8000/staff"
 
 const AddStaff = () => {
 
@@ -10,7 +13,7 @@ const AddStaff = () => {
         e.preventDefault();
 
         const body = { name, role };
-        const response = await fetch("http://localhost:8000/staff", {
+        const response = await fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(body)
