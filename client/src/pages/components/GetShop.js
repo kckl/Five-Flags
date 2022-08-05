@@ -20,7 +20,6 @@ const GetShop = () => {
         getShops();
     }, []);
 
-
     return (
         <>
         

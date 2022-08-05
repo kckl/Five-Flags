@@ -19,7 +19,11 @@ const AddStaff = () => {
             body: JSON.stringify(body)
         });
 
-        alert("Form Submitted!");
+        alert("Employee successfully added!");
+
+        // clear input values in form
+        setName('');
+        setRole('');
     }
 
     return (

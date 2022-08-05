@@ -53,9 +53,9 @@ const Operations = () => {
                         <thead>
                             <tr>
                             <th id="firstcol">Ride Name</th>
-                            <th>Park #</th>
-                            <th>Thrill Level</th>
-                            <th>Capacity</th>
+                            <th id="centercol">Park #</th>
+                            <th id="centercol">Thrill Level</th>
+                            <th id="centercol">Capacity</th>
                             {/* <th id="deletecol">Delete</th> */}
                             </tr>
                         </thead>
@@ -80,9 +80,9 @@ const Operations = () => {
                         <thead>
                             <tr>
                             <th>Park #</th>
-                            <th>City</th>
-                            <th>Country</th>
-                            <th id="deletecol">Remove</th>
+                            <th id="centercol">City</th>
+                            <th id="centercol">Country</th>
+                            <th id="centercol">Remove</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,7 +91,7 @@ const Operations = () => {
                                     <td>{park.id}</td>
                                     <td>{park.city}</td>
                                     <td>{park.country}</td>
-                                    <td id="deletecol"><button onClick={() => removePark(park.id)}>Delete</button></td>
+                                    <td id="centercol"><button onClick={() => removePark(park.id)}>Delete</button></td>
                                 </tr>
                                 ))}
                         </tbody>
