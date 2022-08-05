@@ -1,4 +1,5 @@
-CREATE DATABASE fiveflags;
+DROP TABLE Works_For;
+
 
 CREATE TABLE Staff_Wage (
     Role varchar(20),
@@ -108,7 +109,7 @@ CREATE TABLE Ride_Info (
     Thrill_Level int,
     Capacity int,
     PRIMARY KEY (Name, Park_ID),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID)
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
 );
 
 CREATE TABLE Stay (

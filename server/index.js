@@ -8,9 +8,12 @@ app.use(express.json());
 
 
 app.get("/staff", routes.getStaff);
+app.get("/rides", routes.getRides);
 
-// insert operation
 app.post("/staff", routes.addStaff);
+
+app.delete("/staff/:id", routes.deleteStaff);
+app.delete("/rides/:ridename/:parkid", routes.deleteRide);
 
 const PORT = 8000;
 app.listen(PORT, () => {
