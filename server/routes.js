@@ -41,7 +41,6 @@ const deleteRide = async (req, res) => {
     res.json(`${name} at park #${parkid} was deleted!`);
 };
 
-<<<<<<< HEAD
 const deletePark = async (req, res) => {
     const { id } = req.params;
     const park = await pool.query("DELETE FROM Park WHERE ID = $1", [id]);
@@ -54,7 +53,4 @@ const deleteFood = async (req, res) => {
     res.json(`${name} was deleted!`);
 };
 
-module.exports = { getStaff, getRides, getParks, addStaff, deleteStaff, deleteRide, deletePark, deleteFood };
-=======
-module.exports = { getShop, getStaff, addStaff, deleteStaff, getRides, deleteRide };
->>>>>>> 63f5eb0a62a2368595210c2275e5d6a305a11c77
+module.exports = { getShop, getStaff, getRides, getParks, addStaff, deleteStaff, deleteRide, deletePark, deleteFood };

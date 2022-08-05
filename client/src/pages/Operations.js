@@ -76,26 +76,26 @@ const Operations = () => {
             <div className="rides-box-container">
                 <div className="rides-text-container">
                     <h2>Global Parks</h2>
-                        <table id="parks">
-                            <thead>
+                    <table id="parks">
+                        <thead>
+                            <tr>
+                            <th>Park #</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th id="deletecol">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {parks.map(park => (
                                 <tr>
-                                <th>Park #</th>
-                                <th>City</th>
-                                <th>Country</th>
-                                <th id="deletecol">Remove</th>
+                                    <td>{park.id}</td>
+                                    <td>{park.city}</td>
+                                    <td>{park.country}</td>
+                                    <td id="deletecol"><button onClick={() => removePark(park.id)}>Delete</button></td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {parks.map(park => (
-                                    <tr>
-                                        <td>{park.id}</td>
-                                        <td>{park.city}</td>
-                                        <td>{park.country}</td>
-                                        <td id="deletecol"><button onClick={() => removePark(park.id)}>Delete</button></td>
-                                    </tr>
-                                    ))}
-                            </tbody>
-                        </table>
+                                ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </>
