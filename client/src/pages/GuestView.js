@@ -26,9 +26,8 @@ const GuestView = () => {
     );
 };
 
+export default GuestView;
 
 // selection operation - information dashboard: rides, shops, dining options
 // join operation - find names of rides with x restrictions?
             
-
-export default GuestView;

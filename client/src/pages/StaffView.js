@@ -3,8 +3,8 @@ import './StaffView.css';
 import img from "../images/FiveFlags.png";
 
 // table components
-import AddStaff from "./AddStaff";
-import Operations from "./Operations"
+import AddStaff from "./components/AddStaff";
+import Operations from "./components/Operations"
 
 const StaffView = () => {
     return (
