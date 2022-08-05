@@ -6,7 +6,10 @@ const routes = require("./routes");
 app.use(cors());
 app.use(express.json());
 
+// GUEST VIEW
+app.get("/guest", routes.getShop);
 
+// STAFF VIEW
 app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);

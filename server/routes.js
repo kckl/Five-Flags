@@ -1,5 +1,12 @@
 const pool = require("./db");
 
+// GUEST VIEW
+const getShop = async (req, res) => {
+    const allShop = await pool.query("SELECT * FROM Shop_Category");
+    res.json(allShop.rows);
+};
+
+// STAFF VIEW
 const getStaff = async (req, res) => {
     const allStaff = await pool.query("SELECT * FROM Staff_ID");
     res.json(allStaff.rows);
@@ -34,6 +41,7 @@ const deleteRide = async (req, res) => {
     res.json(`${name} at park #${parkid} was deleted!`);
 };
 
+<<<<<<< HEAD
 const deletePark = async (req, res) => {
     const { id } = req.params;
     const park = await pool.query("DELETE FROM Park WHERE ID = $1", [id]);
@@ -47,3 +55,6 @@ const deleteFood = async (req, res) => {
 };
 
 module.exports = { getStaff, getRides, getParks, addStaff, deleteStaff, deleteRide, deletePark, deleteFood };
+=======
+module.exports = { getShop, getStaff, addStaff, deleteStaff, getRides, deleteRide };
+>>>>>>> 63f5eb0a62a2368595210c2275e5d6a305a11c77

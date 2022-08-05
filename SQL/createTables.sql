@@ -1,5 +1,4 @@
-DROP TABLE Works_For;
-
+CREATE DATABASE fiveflags;
 
 CREATE TABLE Staff_Wage (
     Role varchar(20),
