@@ -2,8 +2,18 @@ const pool = require("./db");
 
 // GUEST VIEW
 const getShop = async (req, res) => {
-    const allShop = await pool.query("SELECT * FROM Shop_Category");
+    const allShop = await pool.query("SELECT * FROM Shop_Category ORDER BY Park_ID");
     res.json(allShop.rows);
+};
+
+const getRestaurant = async (req, res) => {
+    const allRestaurant = await pool.query("SELECT d.name, price, seats, cuisine, park_id FROM Dining_offer d, Restaurant r WHERE d.name=r.name ORDER BY Park_ID");
+    res.json(allRestaurant.rows);
+};
+
+const getFastfood = async (req, res) => {
+    const allFastfood = await pool.query("SELECT d.name, price, type, park_id FROM Dining_offer d, FastFood f WHERE d.name=f.name ORDER BY Park_ID");
+    res.json(allFastfood.rows);
 };
 
 // STAFF VIEW
@@ -28,10 +38,16 @@ const getFood = async (req, res) => {
     res.json(allFood.rows);
 };
 
+<<<<<<< HEAD
 const getLoyal = async (req, res) => {
     const { num } = req.params;
     const allLoyal = await pool.query("SELECT Guest_ID, Name, Count(Park_ID) AS Visits FROM Guest_Visit gv INNER JOIN Guest g ON gv.Guest_ID = g.ID GROUP BY Guest_ID, Name HAVING Count(Park_ID) >= 3 ORDER BY Count(Park_ID) DESC");
     res.json(allLoyal.rows);
+=======
+const getTicketSales = async (req, res) => {
+    const allTicketSales = await pool.query("SELECT type, count(guest_id) FROM guest_visit GROUP BY type ORDER BY type");
+    res.json(allTicketSales.rows);
+>>>>>>> c84f1dafd0b3590787e2996f0c1d8e73580f6bc7
 };
 
 // POST routes
@@ -93,11 +109,17 @@ const deleteFood = async (req, res) => {
 
 module.exports = { 
     getShop, 
+    getRestaurant,
+    getFastfood,
     getStaff, 
     getRides, 
     getParks, 
     getFood, 
+<<<<<<< HEAD
     getLoyal,
+=======
+    getTicketSales,
+>>>>>>> c84f1dafd0b3590787e2996f0c1d8e73580f6bc7
     addStaff, 
     addRide, 
     addFood, 

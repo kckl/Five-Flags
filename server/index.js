@@ -7,13 +7,17 @@ app.use(cors());
 app.use(express.json());
 
 // GUEST VIEW
-app.get("/guest", routes.getShop);
+app.get("/shop", routes.getShop);
+app.get("/restaurant", routes.getRestaurant);
+app.get("/fastfood", routes.getFastfood);
+
 
 // STAFF VIEW
 app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);
 app.get("/food", routes.getFood);
+app.get("/ticketsales", routes.getTicketSales);
 
 // complex queries
 app.get("/loyalty", routes.getLoyal);
