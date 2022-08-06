@@ -35,12 +35,11 @@ const TicketSales = () => {
                             </thead>
                             <tbody>
                             {ticketsales.map(ticketsale => (
-                                                <tr>
-                                                    <td>{ticketsale.type}</td>
-                                                   <td>{ticketsale.count}</td>  
-                                                </tr>
-                                            ))}
-                            
+                                <tr>
+                                    <td>{ticketsale.type}</td>
+                                    <td>{ticketsale.count}</td>  
+                                </tr>
+                            ))}
                             </tbody>
                         </table>
                 </div>
