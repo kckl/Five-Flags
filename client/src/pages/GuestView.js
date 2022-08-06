@@ -3,6 +3,8 @@ import {useState} from 'react';
 import './GuestView.css';
 
 import GetShop from "./components/GetShop";
+import GetDining from "./components/GetDining";
+
 
 const GuestView = () => {
     const [isShown, setIsShown] = useState(false);
@@ -14,7 +16,7 @@ const GuestView = () => {
         <>
             <div className="page-container">
                 <h1>Welcome to the Five Flags Guest Experience Dashboard!</h1>
-                <div>
+                {/*<div>
                 <button onClick={handleClick}>Browse Shops</button>
                     {isShown && (
                         <div>
@@ -22,7 +24,10 @@ const GuestView = () => {
                         </div>
                     )}
                     {isShown &&  <GetShop />}           
-                </div>
+                </div>*/}
+                
+                <GetDining />
+                <GetShop />
             </div>
         </>
     );

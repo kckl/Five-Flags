@@ -7,7 +7,7 @@ const GetShop = () => {
 
     const getShops = async () => {
         try {
-            const response = await fetch("http://localhost:8000/guest");
+            const response = await fetch("http://localhost:8000/shop");
             const jsonData = await response.json();
 
             setShops(jsonData);
@@ -23,13 +23,15 @@ const GetShop = () => {
     return (
         <>
         
-        {" "}
+        <div className="box-container">
+            <div className="text-container">
+            <h2>Shopping</h2>
             <table className="table table-hover">
                 <thead>
                     <tr>
+                        <th>Park ID</th>
                         <th>Shop Name</th>
                         <th>Category</th>
-                        <th>Park ID</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,13 +42,15 @@ const GetShop = () => {
                     </tr> */}
                     {shops.map(shop => (
                         <tr>
+                            <td>{shop.park_id}</td>
                             <td>{shop.name}</td>
                             <td>{shop.category}</td>
-                            <td>{shop.park_id}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            </div>
+            </div>
         </>
     )
 };

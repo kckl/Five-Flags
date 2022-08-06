@@ -2,8 +2,18 @@ const pool = require("./db");
 
 // GUEST VIEW
 const getShop = async (req, res) => {
-    const allShop = await pool.query("SELECT * FROM Shop_Category");
+    const allShop = await pool.query("SELECT * FROM Shop_Category ORDER BY Park_ID");
     res.json(allShop.rows);
+};
+
+const getRestaurant = async (req, res) => {
+    const allRestaurant = await pool.query("SELECT d.name, price, seats, cuisine, park_id FROM Dining_offer d, Restaurant r WHERE d.name=r.name ORDER BY Park_ID");
+    res.json(allRestaurant.rows);
+};
+
+const getFastfood = async (req, res) => {
+    const allFastfood = await pool.query("SELECT d.name, price, type, park_id FROM Dining_offer d, FastFood f WHERE d.name=f.name ORDER BY Park_ID");
+    res.json(allFastfood.rows);
 };
 
 // STAFF VIEW
@@ -87,6 +97,8 @@ const deleteFood = async (req, res) => {
 
 module.exports = { 
     getShop, 
+    getRestaurant,
+    getFastfood,
     getStaff, 
     getRides, 
     getParks, 

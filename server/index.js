@@ -7,7 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 // GUEST VIEW
-app.get("/guest", routes.getShop);
+app.get("/shop", routes.getShop);
+app.get("/restaurant", routes.getRestaurant);
+app.get("/fastfood", routes.getFastfood);
+
 
 // STAFF VIEW
 app.get("/staff", routes.getStaff);
