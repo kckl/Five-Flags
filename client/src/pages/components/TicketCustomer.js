@@ -34,7 +34,7 @@ const TicketCustomer = () => {
             <div className="ops-box-container">
                 <div className="left-text-container">
                     <div>
-                        <h2>Ticket Sales</h2><button type="submit" id="salesButton" onClick={getTicketSales}>Get Sales</button>
+                        <h2 id="ticketcustomer">Ticket Sales</h2><button type="submit" id="salesButton" onClick={getTicketSales}>Get Sales</button>
                     </div>
                     <p id="definition">Total ticket sales for each ticket type</p>
                         <table id="ticketsales">
@@ -57,7 +57,7 @@ const TicketCustomer = () => {
             
                 <div className="right-text-container">
                     <div>
-                        <h2>Loyal Customers</h2><button type="submit" id="loyaltyButton" onClick={getLoyalty}>Get Customers</button>
+                        <h2 id="ticketcustomer">Loyal Customers</h2><button type="submit" id="loyaltyButton" onClick={getLoyalty}>Get Customers</button>
                     </div>
                     <p id="definition">Defined as those customers who have visited any park globally 3 or more times</p>
                     <table id="customers">

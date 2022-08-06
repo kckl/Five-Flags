@@ -1,11 +1,8 @@
-#main {
-    width: 200px;
-    border: 1px dotted black;
-  }
-  h2 {
-    margin: 10;
-      display: inline-block;
-  }
+
+#ticketcustomer {
+  margin: 10;
+  display: inline-block;
+}
 
 
 #loyaltyButton, #salesButton {
