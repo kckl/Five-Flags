@@ -1,9 +1,11 @@
 import React from "react";
 import {useState} from 'react';
 import './GuestView.css';
+import img from "../images/FiveFlags.png";
 
 import GetShop from "./components/GetShop";
 import GetDining from "./components/GetDining";
+
 
 
 const GuestView = () => {
@@ -15,8 +17,12 @@ const GuestView = () => {
     return (
         <>
             <div className="page-container">
-                <h1>Welcome to the Five Flags Guest Experience Dashboard!</h1>
-                <p>Learn more about our rides, shopping, and dining options.</p>
+            <div className="header">
+                <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
+                <img className="small-logo" src={img} alt="company logo"></img>
+                <br></br>
+                <p className="info">Learn more about our rides, shopping, and dining options.</p>
+            </div>
                 {/*<div>
                 <button onClick={handleClick}>Browse Shops</button>
                     {isShown && (
