@@ -5,7 +5,9 @@ import img from "../images/FiveFlags.png";
 
 // table components
 import AddOperations from "./components/AddOperations";
-import Operations from "./components/Operations"
+import Operations from "./components/Operations";
+import Updates from "./components/Updates";
+
 
 const StaffView = () => {
     return (
@@ -22,6 +24,7 @@ const StaffView = () => {
                 </Link>
             </div>
                 <AddOperations />
+                <Updates />
                 <Operations />
             </div>
         </>

@@ -19,6 +19,8 @@ app.post("/staff", routes.addStaff);
 app.post("/rides", routes.addRide);
 app.post("/food", routes.addFood);
 
+app.put("/food/:name", routes.updateFood);
+
 app.delete("/staff/:id", routes.deleteStaff);
 app.delete("/rides/:parkid/:name", routes.deleteRide);
 app.delete("/parks/:id", routes.deletePark);

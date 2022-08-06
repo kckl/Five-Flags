@@ -47,6 +47,18 @@ const addFood = async (req, res) => {
     res.json(addFood.rows[0]);
 };
 
+// PUT routes
+const updateFood = async (req, res) => {
+    const name = req.params;
+
+    // const name = req.body.name;
+    const price = req.body.price;
+    const park_id = req.body.park_id;
+
+    const result = await pool.query("UPDATE Dining_Offer SET Price = $1, Park_ID = $2 WHERE Name = $3", [price, parkid, name]);
+    res.json("Food establishment was updated!");
+}
+
 // DELETE routes
 const deleteStaff = async (req, res) => {
     const { id } = req.params;
@@ -73,4 +85,18 @@ const deleteFood = async (req, res) => {
     res.json(`${name} was deleted!`);
 };
 
-module.exports = { getShop, getStaff, getRides, getParks, getFood, addStaff, addRide, addFood, deleteStaff, deleteRide, deletePark, deleteFood };
+module.exports = { 
+    getShop, 
+    getStaff, 
+    getRides, 
+    getParks, 
+    getFood, 
+    addStaff, 
+    addRide, 
+    addFood, 
+    updateFood, 
+    deleteStaff, 
+    deleteRide, 
+    deletePark, 
+    deleteFood 
+};
