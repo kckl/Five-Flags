@@ -42,7 +42,7 @@ const GetDining = () => {
                         <table id="restaurant">
                             <thead>
                             <tr>
-                                <th>Park ID</th>
+                                <th>Park #</th>
                                 <th>Name</th>
                                 <th>Cuisine</th>
                                 <th>Price</th>
@@ -71,7 +71,7 @@ const GetDining = () => {
                         <table id="fastfood">
                             <thead>
                             <tr>
-                                <th>Park ID</th>
+                                <th>Park #</th>
                                 <th>Name</th>
                                 <th>Type</th>
                                 <th>Price</th>

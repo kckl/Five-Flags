@@ -29,7 +29,7 @@ const GetShop = () => {
             <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th>Park ID</th>
+                        <th>Park #</th>
                         <th>Shop Name</th>
                         <th>Category</th>
                     </tr>

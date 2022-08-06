@@ -16,6 +16,7 @@ const GuestView = () => {
         <>
             <div className="page-container">
                 <h1>Welcome to the Five Flags Guest Experience Dashboard!</h1>
+                <p>Learn more about our rides, shopping, and dining options.</p>
                 {/*<div>
                 <button onClick={handleClick}>Browse Shops</button>
                     {isShown && (
@@ -25,7 +26,7 @@ const GuestView = () => {
                     )}
                     {isShown &&  <GetShop />}           
                 </div>*/}
-                
+
                 <GetDining />
                 <GetShop />
             </div>
