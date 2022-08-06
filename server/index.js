@@ -17,6 +17,7 @@ app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);
 app.get("/food", routes.getFood);
+app.get("/ticketsales", routes.getTicketSales);
 
 app.post("/staff", routes.addStaff);
 app.post("/rides", routes.addRide);

@@ -38,6 +38,11 @@ const getFood = async (req, res) => {
     res.json(allFood.rows);
 };
 
+const getTicketSales = async (req, res) => {
+    const allTicketSales = await pool.query("SELECT type, count(guest_id) FROM guest_visit GROUP BY type ORDER BY type");
+    res.json(allTicketSales.rows);
+};
+
 // POST routes
 const addStaff = async (req, res) => {
     const { name, role } = req.body;
@@ -103,6 +108,7 @@ module.exports = {
     getRides, 
     getParks, 
     getFood, 
+    getTicketSales,
     addStaff, 
     addRide, 
     addFood, 
