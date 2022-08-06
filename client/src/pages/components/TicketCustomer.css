@@ -1,0 +1,26 @@
+#main {
+    width: 200px;
+    border: 1px dotted black;
+  }
+  h2 {
+    margin: 10;
+      display: inline-block;
+  }
+  button {
+    float: right;
+  }
+
+#loyaltyButton, #salesButton {
+    height: 35px;
+    width: 150px;
+    font-family: 'Exo', sans-serif;
+    background-color: rgb(225, 225, 225);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+}
+
+#definition {
+    font-style: italic;
+    display: block;
+}

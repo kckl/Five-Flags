@@ -1,7 +1,7 @@
 import React from "react";
 import './BI.css';
 
-import TicketSales from "./components/TicketSales";
+import TicketCustomer from "./components/TicketCustomer";
 
 const BI = () => {
 
@@ -11,7 +11,7 @@ const BI = () => {
                 <div className="header">
                     <h1>Business Intelligence Dashboard</h1>
                 </div>
-            <TicketSales />
+            <TicketCustomer />
             </div>
         </>
     );
