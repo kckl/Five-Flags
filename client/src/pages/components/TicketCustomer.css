@@ -6,11 +6,10 @@
     margin: 10;
       display: inline-block;
   }
-  button {
-    float: right;
-  }
+
 
 #loyaltyButton, #salesButton {
+    float: right;
     height: 35px;
     width: 150px;
     font-family: 'Exo', sans-serif;
