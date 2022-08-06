@@ -15,6 +15,9 @@ app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);
 app.get("/food", routes.getFood);
 
+// complex queries
+app.get("/loyalty", routes.getLoyal);
+
 app.post("/staff", routes.addStaff);
 app.post("/rides", routes.addRide);
 app.post("/food", routes.addFood);

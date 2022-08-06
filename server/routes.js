@@ -28,6 +28,12 @@ const getFood = async (req, res) => {
     res.json(allFood.rows);
 };
 
+const getLoyal = async (req, res) => {
+    const { num } = req.params;
+    const allLoyal = await pool.query("SELECT Guest_ID, Name, Count(Park_ID) AS Visits FROM Guest_Visit gv INNER JOIN Guest g ON gv.Guest_ID = g.ID GROUP BY Guest_ID, Name HAVING Count(Park_ID) >= 3 ORDER BY Count(Park_ID) DESC");
+    res.json(allLoyal.rows);
+};
+
 // POST routes
 const addStaff = async (req, res) => {
     const { name, role } = req.body;
@@ -91,6 +97,7 @@ module.exports = {
     getRides, 
     getParks, 
     getFood, 
+    getLoyal,
     addStaff, 
     addRide, 
     addFood, 

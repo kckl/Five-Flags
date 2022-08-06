@@ -1,3 +1,16 @@
+.bi-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    text-align: left;
+    background: url("../../images/Uni.png");
+    background-size: cover;
+    background-color: white;
+    background-attachment: fixed;
+}
+
 .ops-box-container {
     background-color: rgb(250, 250, 250);
     opacity: 80%;
@@ -15,13 +28,6 @@
     margin: 15px 30px;
     align-items: center;
     float: left;
-    width: 45%;
-}
-
-.right-text-container {
-    margin: 15px 30px;
-    align-items: center;
-    float: right;
     width: 45%;
 }
 
@@ -46,10 +52,17 @@ tbody tr:hover {
     background-color: rgb(190,190,190);
 }
 
-#firstcol {
-    width: 175px;
+#loyaltyButton {
+    height: 50px;
+    width: 150px;
+    font-family: 'Exo', sans-serif;
+    background-color: rgb(225, 225, 225);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
 }
 
-#centercol {
-    text-align: center;
+#definition {
+    font-style: italic;
+    display: block;
 }

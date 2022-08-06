@@ -1,48 +1,51 @@
 import React, { useEffect, useState } from "react";
 import './BI.css';
-const parksUrl = "http://localhost:8000/parks"
+const url = "http://localhost:8000/loyalty/"
 
 const BI = () => {
 
-    const [parks, setParks] = useState([]);
+    const [loyalty, setLoyalty] = useState([]);
 
-    const getParks = async () => {
-        const response = await fetch(parksUrl);
+    const getLoyalty = async () => {
+        const response = await fetch(url);
         const json = await response.json();
-        setParks(json);
+        setLoyalty(json);
     }
 
-    useEffect(() => {
-        getParks();
-    }, []);
+    // useEffect(() => {
+    //     getLoyalty();
+    // }, []);
 
     return (
         <>
-            <div className="header">
-                    <h1>Business Intelligence Dashboard</h1>
-            </div>
-            <div className="ops-box-container">
-                <div className="left-text-container">
-                    <h2>Global Parks</h2>
-                    <table id="parks">
-                        <thead>
-                            <tr>
-                            <th>Park #</th>
-                            <th>City</th>
-                            <th>Country</th>
-                            <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {parks.map(park => (
+            <div className="bi-page-container">
+                <div className="header">
+                        <h1>Business Intelligence Dashboard</h1>
+                </div>
+                <div className="ops-box-container">
+                    <div className="left-text-container">
+                        <h2>Loyal Customers</h2>
+                        <p id="definition">Defined as those customers who have visited any park globally 3 or more times</p>
+                        <button type="submit" id="loyaltyButton" onClick={getLoyalty}>Get Customers</button>
+                        <table id="customers">
+                            <thead>
                                 <tr>
-                                    <td>{park.id}</td>
-                                    <td>{park.city}</td>
-                                    <td>{park.country}</td>
+                                <th>Guest #</th>
+                                <th>Guest Name</th>
+                                <th># of Visits Globally</th>
                                 </tr>
-                                ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {loyalty.map(l => (
+                                    <tr>
+                                        <td>{l.guest_id}</td>
+                                        <td>{l.name}</td>
+                                        <td>{l.visits}</td>
+                                    </tr>
+                                    ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </>

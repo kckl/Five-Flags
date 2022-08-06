@@ -22,11 +22,15 @@ INSERT INTO Hotel_LocatedNear VALUES('789 Vancouver Street', 'Hyatt', '$$$$', 4,
 INSERT INTO Hotel_LocatedNear VALUES('30 Berlin Road', 'Wyndham', '$$', 3, 5); 
 INSERT INTO Hotel_LocatedNear VALUES('322 Peru Avenue', 'Choice', '$', 4, 4); 
 
-INSERT INTO Guest VALUES(11111, 'Splinter', 65, 'Sewers, NYC', 'Splinter@gmail.com', 374245455400126); 
-INSERT INTO Guest VALUES(22222, 'Leonardo', 17, 'Sewers, NYC', 'Leonardo@gmail.com', NULL); 
-INSERT INTO Guest VALUES(33333, 'Raphael', 17, 'Sewers, NYC', 'Raphael@gmail.com', NULL); 
-INSERT INTO Guest VALUES(44444, 'Donatello', 17, 'Sewers, NYC', 'Donatello@gmail.com', NULL); 
-INSERT INTO Guest VALUES(55555, 'Michelangelo', 17, 'Sewers, NYC', 'Michelangelo@gmail.com', NULL); 
+INSERT INTO Guest VALUES(11111, 'Splinter', 65, 'Sewers, NY', 'Splinter@gmail.com', 3742454554001265); 
+INSERT INTO Guest VALUES(22222, 'Leonardo', 17, 'Sewers, NY', 'Leonardo@gmail.com', NULL); 
+INSERT INTO Guest VALUES(33333, 'Raphael', 17, 'Sewers, NY', 'Raphael@gmail.com', NULL); 
+INSERT INTO Guest VALUES(44444, 'Donatello', 17, 'Sewers, NY', 'Donatello@gmail.com', NULL); 
+INSERT INTO Guest VALUES(55555, 'Michelangelo', 17, 'Sewers, NY', 'Michelangelo@gmail.com', NULL);
+INSERT INTO Guest VALUES(66666, 'Ken', 26, 'Vancouver, BC', 'bozo@gmail.com', NULL); 
+INSERT INTO Guest VALUES(88888, 'Allon', 23, 'Richmond, VA', 'leg@gmail.com', 3792421555486251); 
+INSERT INTO Guest VALUES(99999, 'Jirby', 24, 'Banff, AB', 'garrix@gmail.com', 3888420420540154); 
+INSERT INTO Guest VALUES(15121, 'Trung', 57, 'Ho Chi Minh, Vietnam', 'egg@gmail.com', NULL); 
 
 INSERT INTO Park_Hours VALUES(1, '6:00AM - 10:00PM');
 INSERT INTO Park_Hours VALUES(2, '6:30AM - 10:00PM');
@@ -51,11 +55,21 @@ INSERT INTO Type_Price VALUES('1-Month Pass', 249.99);
 INSERT INTO Type_Price VALUES('1-Week Pass', 179.99);
 INSERT INTO Type_Price VALUES('1-Day Pass', 119.99);
 
-INSERT INTO Guest_Visit VALUES(10001, '1-Day Pass', '2022-12-31', 11111, 1);
-INSERT INTO Guest_Visit VALUES(10002, 'Annual-Unlimited', '2022-07-25', 33333, 2);
-INSERT INTO Guest_Visit VALUES(10003, '1-Month Pass', '2022-01-01', 44444, 2);
-INSERT INTO Guest_Visit VALUES(10004, '1-Week Pass', '2022-09-30', 22222, 3);
-INSERT INTO Guest_Visit VALUES(10005, 'Annual-Unlimited', '2022-05-20', 55555, 4);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Day Pass', '2022-01-31', 11111, 1);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-07-25', 55555, 2);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-01-01', 44444, 2);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Week Pass', '2022-09-30', 22222, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-05-20', 55555, 4);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Day Pass', '2022-01-20', 88888, 1);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Week Pass' '2022-05-15', 66666, 2);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-20', 15121, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-06-02', 99999, 4);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-07-20', 33333, 5);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-21', 88888, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-22', 88888, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-23', 88888, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-24', 88888, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-25', 88888, 3);
 
 INSERT INTO Dining_Offer VALUES('The Keg', '$$$$', 1);
 INSERT INTO Dining_Offer VALUES('Trader Flags Lounge', '$$', 2);
