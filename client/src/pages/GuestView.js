@@ -12,22 +12,20 @@ const GuestView = () => {
 
     return (
         <>
-            <h2>Welcome to Five Flags!</h2>
-            <div>
-            <button onClick={handleClick}>Browse Shops</button>
-                {isShown && (
-                    <div>
-                    <h3>Here are our shops:</h3>
-                    </div>
-                )}
-                {isShown &&  <GetShop />}           
+            <div className="page-container">
+                <h1>Welcome to the Five Flags Guest Experience Dashboard!</h1>
+                <div>
+                <button onClick={handleClick}>Browse Shops</button>
+                    {isShown && (
+                        <div>
+                        <h3>Here are our shops:</h3>
+                        </div>
+                    )}
+                    {isShown &&  <GetShop />}           
+                </div>
             </div>
         </>
     );
 };
 
 export default GuestView;
-
-// selection operation - information dashboard: rides, shops, dining options
-// join operation - find names of rides with x restrictions?
-            

@@ -13,8 +13,11 @@ app.get("/guest", routes.getShop);
 app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);
+app.get("/food", routes.getFood);
 
 app.post("/staff", routes.addStaff);
+app.post("/rides", routes.addRide);
+app.post("/food", routes.addFood);
 
 app.delete("/staff/:id", routes.deleteStaff);
 app.delete("/rides/:parkid/:name", routes.deleteRide);

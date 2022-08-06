@@ -7,6 +7,7 @@ const getShop = async (req, res) => {
 };
 
 // STAFF VIEW
+// GET routes
 const getStaff = async (req, res) => {
     const allStaff = await pool.query("SELECT * FROM Staff_ID");
     res.json(allStaff.rows);
@@ -22,12 +23,31 @@ const getParks = async (req, res) => {
     res.json(allParks.rows);
 };
 
+const getFood = async (req, res) => {
+    const allFood = await pool.query("SELECT * FROM Dining_Offer");
+    res.json(allFood.rows);
+};
+
+// POST routes
 const addStaff = async (req, res) => {
     const { name, role } = req.body;
     const addStaff = await pool.query("INSERT INTO Staff_ID(Name, Role) VALUES($1, $2)", [name, role]);
     res.json(addStaff.rows[0]);
 };
 
+const addRide = async (req, res) => {
+    const { rideName, ridePark, thrillLevel, capacity } = req.body;
+    const addRide = await pool.query("INSERT INTO Ride_Info VALUES($1, $2, $3, $4)", [rideName, ridePark, thrillLevel, capacity]);
+    res.json(addRide.rows[0]);
+};
+
+const addFood = async (req, res) => {
+    const { foodName, foodPark, price } = req.body;
+    const addFood = await pool.query("INSERT INTO Dining_Offer VALUES($1, $3, $2)", [foodName, foodPark, price]);
+    res.json(addFood.rows[0]);
+};
+
+// DELETE routes
 const deleteStaff = async (req, res) => {
     const { id } = req.params;
     const staff = await pool.query("DELETE FROM Staff_ID WHERE id = $1", [id]);
@@ -53,4 +73,4 @@ const deleteFood = async (req, res) => {
     res.json(`${name} was deleted!`);
 };
 
-module.exports = { getShop, getStaff, getRides, getParks, addStaff, deleteStaff, deleteRide, deletePark, deleteFood };
+module.exports = { getShop, getStaff, getRides, getParks, getFood, addStaff, addRide, addFood, deleteStaff, deleteRide, deletePark, deleteFood };

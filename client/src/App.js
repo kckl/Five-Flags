@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import StaffView from "./pages/StaffView";
 import GuestView from "./pages/GuestView";
+import BI from "./pages/components/BI";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="StaffView" element={<StaffView />} />
           <Route path="GuestView" element={<GuestView />} />
+          <Route path="BIDashboard" element={<BI />} />
         </Route>
       </Routes>
     </BrowserRouter>
