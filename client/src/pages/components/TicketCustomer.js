@@ -12,6 +12,9 @@ const TicketCustomer = () => {
             const jsonData = await response.json();
 
             setTicketSales(jsonData);
+
+            alert("Ticket sales data refreshed!");
+
         } catch (err) {
             console.error(err.message);
         }

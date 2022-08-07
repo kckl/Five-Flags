@@ -12,12 +12,16 @@ const Loyalty = () => {
         const response = await fetch(loyaltyUrl);
         const json = await response.json();
         setLoyalty(json);
+
+        alert("Customer data refreshed!");
     }
 
     const getGlobalist = async () => {
         const response = await fetch(globalistUrl);
         const json = await response.json();
         setGlobalist(json);
+
+        alert("Customer data refreshed!");
     }
 
     return (

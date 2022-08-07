@@ -29,10 +29,7 @@ app.post("/food", routes.addFood);
 
 app.put("/food/:name", routes.updateFood);
 
-app.delete("/staff/:id", routes.deleteStaff);
-app.delete("/rides/:parkid/:name", routes.deleteRide);
 app.delete("/parks/:id", routes.deletePark);
-app.delete("/dining/:name", routes.deleteFood);
 
 const PORT = 8000;
 app.listen(PORT, () => {

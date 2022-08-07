@@ -123,7 +123,7 @@ CREATE TABLE Ride_Restriction (
 );
 
 CREATE TABLE Ride_Info (
-    Name varchar(20),
+    Name varchar(50),
     Park_ID int,
     Thrill_Level int,
     Capacity int,
@@ -186,8 +186,10 @@ CREATE TABLE Works_For (
 INSERT INTO Staff_Wage VALUES('Janitor', 20);
 INSERT INTO Staff_Wage VALUES('Concessions', 25);
 INSERT INTO Staff_Wage VALUES('Manager', 50);
-INSERT INTO Staff_Wage VALUES('Intern', 15);
-INSERT INTO Staff_Wage VALUES('CEO', 100);
+INSERT INTO Staff_Wage VALUES('Intern', 10);
+INSERT INTO Staff_Wage VALUES('CEO', 200);
+INSERT INTO Staff_Wage VALUES('Server', 15);
+INSERT INTO Staff_Wage VALUES('Ride Operator', 15);
 
 INSERT INTO Staff_ID(Name, Role) VALUES('John McDonald', 'CEO'); 
 INSERT INTO Staff_ID(Name, Role) VALUES('Betty Capinski', 'Manager'); 
@@ -248,6 +250,10 @@ INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited'
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Day Pass', '2022-01-20', 88888, 1);
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Week Pass', '2022-05-15', 66666, 2);
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-20', 15121, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-21', 15121, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-22', 15121, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-23', 15121, 3);
+INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('1-Month Pass', '2022-04-24', 15121, 3);
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-06-02', 99999, 4);
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-07-20', 33333, 5);
 INSERT INTO Guest_Visit(Type, Date, Guest_ID, Park_ID) VALUES('Annual-Unlimited', '2022-01-21', 88888, 3);
@@ -288,7 +294,9 @@ INSERT INTO FastFood VALUES('The Confectionary', 'Ice Cream');
 INSERT INTO FastFood VALUES('Burger Queen', 'Burgers');
 
 INSERT INTO Ride_Restriction VALUES(8, 50, 'Must be 44 inches');
-INSERT INTO Ride_Restriction VALUES(8, 30, 'Must be 44 inches');
+INSERT INTO Ride_Restriction VALUES(8, 30, 'Must be 46 inches');
+INSERT INTO Ride_Restriction VALUES(10, 30, 'Must be 52 inches');
+INSERT INTO Ride_Restriction VALUES(10, 15, 'Must be 52 inches');
 INSERT INTO Ride_Restriction VALUES(1, 20, 'Adult supervision required');
 INSERT INTO Ride_Restriction VALUES(6, 10, 'Must be 40 inches');
 INSERT INTO Ride_Restriction VALUES(2, 15, 'Adult supervision required');
@@ -299,6 +307,17 @@ INSERT INTO Ride_Info VALUES('Jungle Cruise', 3, 1, 20);
 INSERT INTO Ride_Info VALUES('Radiator Springs', 4, 6, 10);
 INSERT INTO Ride_Info VALUES('Peter Pan`s Flight', 5, 2, 15);
 INSERT INTO Ride_Info VALUES('Peter Pan`s Flight', 1, 2, 15);
+INSERT INTO Ride_Info VALUES('Big Thunder Mountain Railroad', 5, 6, 40);
+INSERT INTO Ride_Info VALUES('Millennium Falcon: Smugglers Run', 3, 2, 25);
+INSERT INTO Ride_Info VALUES('Mission: SPACE', 4, 7, 60);
+INSERT INTO Ride_Info VALUES('Space Mountain', 1, 10, 15);
+INSERT INTO Ride_Info VALUES('Space Mountain', 3, 10, 15);
+INSERT INTO Ride_Info VALUES('Space Mountain', 4, 10, 15);
+INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 1, 10, 30);
+INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 2, 10, 30);
+INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 3, 10, 30);
+INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 4, 10, 30);
+INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 5, 10, 30);
 
 INSERT INTO Stay VALUES(11111, '123 Dubai Street', '1997-01-01', '1998-01-01');
 INSERT INTO Stay VALUES(22222, '456 Las Vegas Road', '2030-03-03', '2030-03-12');
