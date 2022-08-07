@@ -54,7 +54,7 @@ const getGlobalist = async (req, res) => {
 };
 
 const getThrillingRide = async (req, res) => {
-    const thrillingRide = await pool.query("SELECT * FROM ride_info WHERE thrill_level > (SELECT AVG(thrill_level) FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count)");
+    const thrillingRide = await pool.query("SELECT * FROM ride_info WHERE thrill_level > (SELECT AVG(thrill_level) FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count) ORDER BY Park_ID ASC");
     res.json(thrillingRide.rows);
 };
 
