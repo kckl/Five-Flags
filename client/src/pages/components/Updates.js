@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import './Updates.css';
 const diningUrl = "http://localhost:8000/food"
 const rideUrl = "http://localhost:8000/rides"
 
+=======
+import React from "react";
+>>>>>>> 335ce19a01cba60d02e1ac5f17117f98e37d12ce
 
 const Updates = () => {
 
@@ -55,6 +59,7 @@ const Updates = () => {
 
     return (
         <>
+<<<<<<< HEAD
             <div className = "box-container1">
                 <div className = "text-container">
                 <h2>Update Ride Options</h2>
@@ -141,6 +146,9 @@ const Updates = () => {
                     </div>                        
                 </div>
             </div>            
+=======
+            <h2>TEST</h2>
+>>>>>>> 335ce19a01cba60d02e1ac5f17117f98e37d12ce
         </>
     );
 };

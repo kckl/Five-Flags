@@ -46,16 +46,21 @@ const Operations = () => {
         getFood();
     }, []);
 
-    const removePark = async (id) => {
+    const removePark = async (id, name) => {
         const removePark = await fetch(parksUrl + `/${id}`, {
             method: "DELETE"
         });
 
         console.log(removePark);
 
-        setParks(parks.filter(park => park.id !== id));
-        setRides(rides.filter(ride => ride.park_id !== id));
-        setFood(food.filter(f => f.park_id !== id));
+        alert(`Park #${id} was deleted!`);
+        window.location.reload(false);
+
+        setTimeout(() => {
+            setParks(parks.filter(park => park.id !== id));
+            setRides(rides.filter(ride => ride.park_id !== id));
+            setFood(food.filter(f => f.park_id !== id));
+        }, 3000);
     }
 
     return (
@@ -69,7 +74,7 @@ const Operations = () => {
                             <th>Park #</th>
                             <th>City</th>
                             <th>Country</th>
-                            <th>Remove</th>
+                            <th id="centercol">Remove</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,7 +83,7 @@ const Operations = () => {
                                     <td>{park.id}</td>
                                     <td>{park.city}</td>
                                     <td>{park.country}</td>
-                                    <td id="centercol"><button onClick={() => removePark(park.id)}>Delete</button></td>
+                                    <td id="centercol"><button id="deletePark" onClick={() => removePark(park.id)}>Delete</button></td>
                                 </tr>
                                 ))}
                         </tbody>
@@ -92,6 +97,7 @@ const Operations = () => {
                             <th>Staff #</th>
                             <th>Name</th>
                             <th>Role</th>
+                            <th>Wage (US$/hr)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -100,6 +106,7 @@ const Operations = () => {
                                     <td>{s.id}</td>
                                     <td>{s.name}</td>
                                     <td>{s.role}</td>
+                                    <td>${s.wage}</td>
                                 </tr>
                                 ))}
                         </tbody>
@@ -112,7 +119,7 @@ const Operations = () => {
                     <table id="rides">
                         <thead>
                             <tr>
-                            <th id="firstcol">Ride Name</th>
+                            <th>Ride Name</th>
                             <th>Park #</th>
                             <th>Thrill Level</th>
                             <th>Capacity</th>

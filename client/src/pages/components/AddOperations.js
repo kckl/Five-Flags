@@ -1,4 +1,3 @@
-// insert operation - add new staff
 
 import React, { useState } from "react";
 import './AddOperations.css';
@@ -32,6 +31,7 @@ const AddStaff = () => {
 
         console.log(response);
         alert("Employee successfully added!");
+        window.location.reload(false);
 
         // clear input values in form
         setStaffName('');
@@ -140,6 +140,7 @@ const AddStaff = () => {
                                 <input
                                     type="number"
                                     min="1"
+                                    max="100"
                                     value={capacity}
                                     onChange={e => setCapacity(e.target.value)}
                                     required />
