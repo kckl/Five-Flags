@@ -38,15 +38,19 @@ const getFood = async (req, res) => {
     res.json(allFood.rows);
 };
 
-const getLoyal = async (req, res) => {
-    const { num } = req.params;
-    const allLoyal = await pool.query("SELECT Guest_ID, Name, Count(Park_ID) AS Visits FROM Guest_Visit gv INNER JOIN Guest g ON gv.Guest_ID = g.ID GROUP BY Guest_ID, Name HAVING Count(Park_ID) >= 3 ORDER BY Count(Park_ID) DESC");
-    res.json(allLoyal.rows);
-};
-    
 const getTicketSales = async (req, res) => {
     const allTicketSales = await pool.query("SELECT type, count(guest_id) FROM guest_visit GROUP BY type ORDER BY type");
     res.json(allTicketSales.rows);
+};
+
+const getLoyal = async (req, res) => {
+    const allLoyal = await pool.query("SELECT Guest_ID, Name, Count(Park_ID) AS visits FROM Guest_Visit gv INNER JOIN Guest g ON gv.Guest_ID = g.ID GROUP BY Guest_ID, Name HAVING Count(Park_ID) >= 3 ORDER BY Count(Park_ID) DESC");
+    res.json(allLoyal.rows);
+};
+    
+const getGlobalist = async (req, res) => {
+    const allGlobalist = await pool.query("SELECT * FROM Guest g WHERE NOT EXISTS ((SELECT p.ID FROM Park p) EXCEPT (SELECT gv.Park_ID FROM Guest_Visit gv WHERE g.ID = gv.Guest_ID))");
+    res.json(allGlobalist.rows);
 };
 
 // POST routes
@@ -114,8 +118,9 @@ module.exports = {
     getRides, 
     getParks, 
     getFood, 
-    getLoyal,
     getTicketSales,
+    getLoyal,
+    getGlobalist,
     addStaff, 
     addRide, 
     addFood, 

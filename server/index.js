@@ -17,10 +17,11 @@ app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
 app.get("/parks", routes.getParks);
 app.get("/food", routes.getFood);
-app.get("/ticketsales", routes.getTicketSales);
 
 // complex queries
+app.get("/ticketsales", routes.getTicketSales);
 app.get("/loyalty", routes.getLoyal);
+app.get("/globalist", routes.getGlobalist);
 
 app.post("/staff", routes.addStaff);
 app.post("/rides", routes.addRide);

@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+// import {useState} from 'react';
 import './GuestView.css';
 import img from "../images/FiveFlags.png";
 
@@ -9,10 +9,10 @@ import GetDining from "./components/GetDining";
 
 
 const GuestView = () => {
-    const [isShown, setIsShown] = useState(false);
-    const handleClick = event => {
-        setIsShown(current => !current);
-      };
+    // const [isShown, setIsShown] = useState(false);
+    // const handleClick = event => {
+    //     setIsShown(current => !current);
+    //   };
 
     return (
         <>

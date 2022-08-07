@@ -69,7 +69,7 @@ const Operations = () => {
                             <th>Park #</th>
                             <th>City</th>
                             <th>Country</th>
-                            <th>Remove</th>
+                            <th id="centercol">Remove</th>
                             </tr>
                         </thead>
                         <tbody>
