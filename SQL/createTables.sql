@@ -96,7 +96,7 @@ CREATE TABLE Dining_Offer (
     Price varchar(10),
     Park_ID int NOT NULL,
     PRIMARY KEY (Name),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Restaurant (
@@ -104,14 +104,14 @@ CREATE TABLE Restaurant (
     Seats int, 
     Cuisine varchar(20),
     PRIMARY KEY (Name),
-    FOREIGN KEY (Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE
+    FOREIGN KEY (Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE FastFood (
     Name varchar(30),
     Type varchar(20),
     PRIMARY KEY (Name),
-    FOREIGN KEY (Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE
+    FOREIGN KEY (Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Ride_Restriction (
@@ -127,7 +127,7 @@ CREATE TABLE Ride_Info (
     Thrill_Level int,
     Capacity int,
     PRIMARY KEY (Name, Park_ID),
-    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
+    FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Stay (
@@ -153,16 +153,16 @@ CREATE TABLE Enjoy (
     Ride_Name varchar(20),
     Park_ID int,
     PRIMARY KEY (Guest_ID, Ride_Name, Park_ID),
-    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID) ON DELETE CASCADE,
-    FOREIGN KEY (Ride_Name, Park_ID) REFERENCES Ride_Info(Name, Park_ID) ON DELETE CASCADE
+    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Ride_Name, Park_ID) REFERENCES Ride_Info(Name, Park_ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Dines (
     Guest_ID int,
     Dining_Name varchar(20),
     PRIMARY KEY (Guest_ID, Dining_Name),
-    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID) ON DELETE CASCADE,
-    FOREIGN KEY (Dining_Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE
+    FOREIGN KEY (Guest_ID) REFERENCES Guest(ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (Dining_Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE ON UPDATE CASCADE 
 );
 
 -- CREATE TABLE Visit (
@@ -292,6 +292,10 @@ INSERT INTO Ride_Info VALUES('Peter Pan`s Flight', 5, 2, 15);
 INSERT INTO Ride_Info VALUES('Peter Pan`s Flight', 1, 2, 15);
 
 INSERT INTO Stay VALUES(11111, '123 Dubai Street', '1997-01-01', '1998-01-01');
+INSERT INTO Stay VALUES(22222, '123 Dubai Street', '1997-01-01', '1998-01-01');
+INSERT INTO Stay VALUES(33333, '123 Dubai Street', '1997-01-01', '1998-01-01');
+INSERT INTO Stay VALUES(44444, '123 Dubai Street', '1997-01-01', '1998-01-01');
+INSERT INTO Stay VALUES(55555, '123 Dubai Street', '1997-01-01', '1998-01-01');
 INSERT INTO Stay VALUES(22222, '456 Las Vegas Road', '2030-03-03', '2030-03-12');
 INSERT INTO Stay VALUES(33333, '789 Vancouver Street', '2010-11-11', '2010-11-12');
 INSERT INTO Stay VALUES(44444, '30 Berlin Road', '2022-02-01', '2022-02-11');

@@ -21,12 +21,14 @@ app.get("/ticketsales", routes.getTicketSales);
 
 // complex queries
 app.get("/loyalty", routes.getLoyal);
+app.get("/thrillingride", routes.getThrillingRide);
 
 app.post("/staff", routes.addStaff);
 app.post("/rides", routes.addRide);
 app.post("/food", routes.addFood);
 
 app.put("/food/:name", routes.updateFood);
+app.put("/rides/:parkid/:name", routes.updateRide);
 
 app.delete("/staff/:id", routes.deleteStaff);
 app.delete("/rides/:parkid/:name", routes.deleteRide);

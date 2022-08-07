@@ -5,8 +5,8 @@ import img from "../images/FiveFlags.png";
 
 // table components
 import AddOperations from "./components/AddOperations";
-import Operations from "./components/Operations";
 import Updates from "./components/Updates";
+import Operations from "./components/Operations";
 
 
 const StaffView = () => {

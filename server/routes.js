@@ -49,6 +49,11 @@ const getTicketSales = async (req, res) => {
     res.json(allTicketSales.rows);
 };
 
+const getThrillingRide = async (req, res) => {
+    const thrillingRide = await pool.query("SELECT * FROM ride_info WHERE thrill_level > (SELECT AVG(thrill_level) FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count)");
+    res.json(thrillingRide.rows);
+};
+
 // POST routes
 const addStaff = async (req, res) => {
     const { name, role } = req.body;
@@ -70,14 +75,25 @@ const addFood = async (req, res) => {
 
 // PUT routes
 const updateFood = async (req, res) => {
-    const name = req.params;
+    const {name} = req.params.name;
+    const {price} = req.body.price;
+    const {park_id} = parseInt(req.params.park_id);
 
-    // const name = req.body.name;
-    const price = req.body.price;
-    const park_id = req.body.park_id;
-
-    const result = await pool.query("UPDATE Dining_Offer SET Price = $1, Park_ID = $2 WHERE Name = $3", [price, parkid, name]);
+    const result = await pool.query(
+    "UPDATE dining_offer SET price = $3, park_ID = $2 where name = $1", 
+    [name, park_id, price]);
     res.json("Food establishment was updated!");
+}
+
+const updateRide = async (req, res) => {
+    const {name} = req.params.name;
+    const {park_id} = req.params.park_id;
+    const {thrill, capacity} = parseInt(req.body);
+
+    const result = await pool.query(
+        "UPDATE Ride_Info SET thrill_level = $1, capacity = $2 WHERE name = $3 AND park_id = $4",
+        [thrill, capacity, name, park_id]);
+    res.json("Ride was updated!") ;
 }
 
 // DELETE routes
@@ -116,10 +132,12 @@ module.exports = {
     getFood, 
     getLoyal,
     getTicketSales,
+    getThrillingRide,
     addStaff, 
     addRide, 
     addFood, 
-    updateFood, 
+    updateFood,
+    updateRide, 
     deleteStaff, 
     deleteRide, 
     deletePark, 
