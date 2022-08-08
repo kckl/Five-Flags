@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import './Updates.css';
 const diningUrl = "http://localhost:8000/food"
 const rideUrl = "http://localhost:8000/rides"
 
 const Updates = () => {
 
-    const [oldDiningName, setDiningOldName] = useState("");
+    const [oldDiningName, setDiningOldName] = useState();
     const [newDiningParkID, setDiningNewParkID] = useState("");
     const [newDiningPrice, setDiningNewPrice] = useState("");
 
@@ -18,18 +19,21 @@ const Updates = () => {
         e.preventDefault();
 
         const body = { oldDiningName, newDiningParkID, newDiningPrice };
-        const response = await fetch(diningUrl, {
+        const response = await fetch(`http://localhost:8000/food/${body[oldDiningName]}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(body)
         });
 
+        console.log(body);
         console.log(response);
-        alert("Restaurant successfully updated!");
+        // alert("Restaurant successfully updated!");
         
-        setDiningOldName('');
-        setDiningNewParkID('');
-        setDiningNewPrice('');
+        // setDiningOldName('');
+        // setDiningNewParkID('');
+        // setDiningNewPrice('');
+
+
     }
 
     const HandleRideUpdate = async (e) => {
@@ -56,7 +60,7 @@ const Updates = () => {
         <>
             <div className = "box-container1">
                 <div className = "text-container">
-                <h2>Update Ride Options</h2>
+                {/* <h2>Update Ride Options</h2>
                     <div className="name">
                         <form onSubmit={HandleRideUpdate}>
                             <label>Existing Ride Name: </label>
@@ -100,13 +104,53 @@ const Updates = () => {
                                     
                             <input type="submit" value="Update Ride" />
                         </form>                        
-                    </div>
+                    </div> */}
                     
                     <br></br>
 
                     <h2>Update Dining Options</h2>
+
+                    {/* <div>
+                        <form action="">
+                            <div className="form-group">
+                                <label htmlFor="name">Name</label>
+                                <input 
+                                    value={oldDiningName} 
+                                    onChange={e => setDiningOldName(e.target.value)} 
+                                    id = "name" 
+                                    className="form-control" 
+                                    type="text" 
+                                    required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="parkid">parkid</label>
+                                <input 
+                                    value={newDiningParkID}
+                                    onChange={e => setDiningNewParkID(e.target.value)}
+                                    id = "parkid" 
+                                    className="form-control" 
+                                    type="number" 
+                                    min="1" 
+                                    max="5" 
+                                    required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="price">price</label>
+                                <input 
+                                    value={newDiningPrice}
+                                    onChange={e => setDiningNewPrice(e.target.value)}                                
+                                    id = "price" 
+                                    className="form-control" 
+                                    type="text" 
+                                    required />
+                            </div>
+                            <button type="submit" onClick={e => HandleDiningUpdate(e)} className="btn btn-primary">Update</button>
+                        </form>
+                    </div> */}
+
+
                     <div className="name">
-                        <form onSubmit={HandleDiningUpdate}>
+                        <form onSubmit={e => HandleDiningUpdate(e)}>
                             <label>Existing Dining Name: </label>
                                 <input 
                                     type ="text"
@@ -123,14 +167,14 @@ const Updates = () => {
                                     type="number"
                                     min="1"
                                     max="5"
-                                    value = {newDiningParkID}
+                                    value = {parseInt(newDiningParkID)}
                                     onChange = {e => setDiningNewParkID(e.target.value)}
                                     required />
 
                             <div className="formspace"></div>
                             <label>Price: </label>
                                 <input
-                                    type = {"text"}
+                                    type = "text"
                                     value = {newDiningPrice}
                                     onChange = {e => setDiningNewPrice(e.target.value)}
                                     required />
@@ -138,9 +182,11 @@ const Updates = () => {
                             <input type="submit" value="Update Dining" />
                         </form>                        
                     </div>                        
+
+                    
                 </div>
             </div>          
-            <h2>TEST</h2>
+
         </>
     );
 };

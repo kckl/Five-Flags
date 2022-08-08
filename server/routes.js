@@ -79,13 +79,11 @@ const addFood = async (req, res) => {
 
 // PUT routes
 const updateFood = async (req, res) => {
-    const {name} = req.params.name;
-    const {price} = req.body.price;
-    const {park_id} = parseInt(req.params.park_id);
-
+    console.log(req.params);
+    console.log(req.body);
     const result = await pool.query(
     "UPDATE dining_offer SET price = $3, park_ID = $2 where name = $1", 
-    [name, park_id, price]);
+    [req.params.name, req.body.park_id, req.body.price]);
     res.json("Food establishment was updated!");
 }
 
