@@ -26,18 +26,18 @@ const GuestView = () => {
                 </div>
 
                 <div>
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
+                    <ul className="nav justify-content-center">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/GuestView">Park Information</a>
+                        <li className="nav-item">
+                            <a className="nav-link active" href="/GuestView">Park Information</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Attractions</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Attractions</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Places to Stay</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Places to Stay</a>
                         </li>
                     </ul>
                 </div>

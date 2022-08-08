@@ -6,12 +6,20 @@ const ParkInfo = () => {
     const [hours, setHours] = useState([]);
     const [tickets, setTickets] = useState([]);
 
-
     const getHours = async(id) => {
-        const response = await fetch("http://localhost:8000/hours" + `/:${id}`);
-        const jsonData = await response.json();
-        setHours(jsonData);
+        const response = await fetch("http://localhost:8000/hours" + `/${id}`);
+        console.log(response);
+
+        // const jsonData = await response.json();
+        // setHours(jsonData);
     };
+
+    function fn1() {
+        var select = document.getElementById("parkhours");
+        var selected = select.options[select.selectedIndex].value;
+
+        getHours(1);
+    }
 
     const getTickets = async() => {
         const response = await fetch("http://localhost:8000/ticketinfo");
@@ -22,7 +30,7 @@ const ParkInfo = () => {
     useEffect(() => {
         getHours();
         getTickets();
-    });
+    }, []);
 
     return (
         <>
@@ -38,6 +46,7 @@ const ParkInfo = () => {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
+                        <button onClick={fn1}>Submit</button>
                    
                         <table id="hours">
                             <thead>
@@ -50,33 +59,32 @@ const ParkInfo = () => {
                             </thead>
                             <tbody>
                             {hours.map(hour => (
-                                                <tr>
-                                                    <td>{hour.id}</td>
-                                                    <td>{hour.city}</td>
-                                                    <td>{hour.country}</td>
-                                                    <td>{hour.hours}</td>
-                                                </tr>
-                                            ))}
-                            
+                                <tr>
+                                    <td>{hour.id}</td>
+                                    <td>{hour.city}</td>
+                                    <td>{hour.country}</td>
+                                    <td>{hour.hours}</td>
+                                </tr>
+                            ))}
                             </tbody>
                         </table>
                 </div>
 
                 <div className="right-text-container">
                     <h2>Tickets</h2>
-                        <p>Prices in CAD per ticket.</p>
+                        <p>Prices in USD per ticket.</p>
                         <table id="ticketinfo">
                             <thead>
                             <tr>
                                 <th>Type</th>
-                                <th>Price ($)</th>
+                                <th>Price</th>
                             </tr>
                             </thead>
                             <tbody>
                             {tickets.map(ticket => (
                                                 <tr>
                                                     <td>{ticket.type}</td>
-                                                    <td>{ticket.price}</td>
+                                                    <td>${ticket.price}</td>
                                                 </tr>
                                             ))}
                             

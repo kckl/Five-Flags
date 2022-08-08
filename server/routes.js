@@ -16,10 +16,10 @@ const getFastfood = async (req, res) => {
     res.json(allFastfood.rows);
 };
 
-const getHour = async (req, res) => {
-    const { id } = parseInt(req.params.id);
+const getHours = async (req, res) => {
+    const { id } = parseInt(req.params);
     const allHour = await pool.query("SELECT p.id, p.city, p.country, ph.hours FROM Park p INNER JOIN Park_Hours ph ON p.id=ph.park_id WHERE p.id = $1", [id]);
-    res.json(allHour.rows);
+    res.json(allHour.rows[0]);
 };
 
 const getTicketInfo = async (req, res) => {
@@ -132,7 +132,7 @@ module.exports = {
     getShop, 
     getRestaurant,
     getFastfood,
-    getHour,
+    getHours,
     getTicketInfo,
     getStaff, 
     getRides, 
