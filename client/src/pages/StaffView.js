@@ -24,7 +24,7 @@ const StaffView = () => {
                 </Link>
             </div>
                 <AddOperations />
-                <Updates />
+                {/* <Updates /> */}
                 <Operations />
             </div>
         </>
