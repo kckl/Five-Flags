@@ -26,6 +26,7 @@ const Updates = () => {
             const data = await res.json();
             setResult(data);
         }
+        console.log(name);
     }
 
     // const HandleDiningUpdate = async (e) => {
