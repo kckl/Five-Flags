@@ -45,3 +45,7 @@ table td, table th {
 tbody tr:hover {
     background-color: rgb(190,190,190);
 }
+
+#restaurantparkid, #restaurantprice {
+    margin-right: 10px;
+}

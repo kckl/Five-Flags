@@ -7,12 +7,16 @@ const getShop = async (req, res) => {
 };
 
 const getRestaurant = async (req, res) => {
-    const allRestaurant = await pool.query("SELECT d.name, price, seats, cuisine, park_id FROM Dining_offer d, Restaurant r WHERE d.name=r.name ORDER BY Park_ID");
+    const { id } = req.params;
+    const { price } = req.params;
+    const allRestaurant = await pool.query("SELECT d.name, price, cuisine, park_id FROM Dining_offer d, Restaurant r WHERE d.name=r.name AND park_id =$1 AND price = $2 ORDER BY Price", [id, price]);
     res.json(allRestaurant.rows);
 };
 
 const getFastfood = async (req, res) => {
-    const allFastfood = await pool.query("SELECT d.name, price, type, park_id FROM Dining_offer d, FastFood f WHERE d.name=f.name ORDER BY Park_ID");
+    const { id } = req.params;
+    const { price } = req.params;
+    const allFastfood = await pool.query("SELECT d.name, price, type, park_id FROM Dining_offer d, FastFood f WHERE d.name=f.name AND park_id =$1 AND price = $2 ORDER BY Price", [id, price]);
     res.json(allFastfood.rows);
 };
 

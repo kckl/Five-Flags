@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import StaffView from "./pages/StaffView";
 import GuestView from "./pages/GuestView";
 import BIView from "./pages/BIView";
+import ThingsToDo from "./pages/ThingsToDo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="StaffView" element={<StaffView />} />
           <Route path="GuestView" element={<GuestView />} />
           <Route path="BIDashboard" element={<BIView />} />
+          <Route path="ThingsToDo" element={<ThingsToDo />} />
         </Route>
       </Routes>
     </BrowserRouter>

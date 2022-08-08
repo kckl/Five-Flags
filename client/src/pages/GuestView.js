@@ -1,19 +1,12 @@
 import React from "react";
-// import {useState} from 'react';
 import './GuestView.css';
 import img from "../images/FiveFlags.png";
 
-import GetShop from "./components/GetShop";
-import GetDining from "./components/GetDining";
 import ParkInfo from "./components/ParkInfo";
 
 
 
 const GuestView = () => {
-    // const [isShown, setIsShown] = useState(false);
-    // const handleClick = event => {
-    //     setIsShown(current => !current);
-    //   };
 
     return (
         <>
@@ -34,10 +27,10 @@ const GuestView = () => {
                             <a className="nav-link active" href="/GuestView">Park Information</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Attractions</a>
+                            <a className="nav-link" href="/ThingsToDo">Things To Do</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Places to Stay</a>
+                            <a className="nav-link" href="#">Places To Stay</a>
                         </li>
                     </ul>
                 </div>
