@@ -3,6 +3,8 @@
 
 import React, { useEffect, useState } from "react";
 import './Operations.css';
+import EditFoods from "./EditFoods";
+
 const parksUrl = "http://localhost:8000/parks"
 const staffUrl = "http://localhost:8000/staff"
 const ridesUrl = "http://localhost:8000/rides"
@@ -145,6 +147,7 @@ const Operations = () => {
                             <th>Name</th>
                             <th>Park #</th>
                             <th>Price</th>
+                            <th>EDIT</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -153,6 +156,10 @@ const Operations = () => {
                                     <td>{f.name}</td>
                                     <td>{f.park_id}</td>
                                     <td>{f.price}</td>
+                                    <td align="center">
+                                        <EditFoods foods = {f}/>
+                                        
+                                    </td>
                                 </tr>
                                 ))}
                         </tbody>
