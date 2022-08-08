@@ -17,7 +17,7 @@ const getFastfood = async (req, res) => {
 };
 
 const getHours = async (req, res) => {
-    const { id } = parseInt(req.params);
+    const { id } = req.params;
     const allHour = await pool.query("SELECT p.id, p.city, p.country, ph.hours FROM Park p INNER JOIN Park_Hours ph ON p.id=ph.park_id WHERE p.id = $1", [id]);
     res.json(allHour.rows[0]);
 };

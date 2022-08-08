@@ -6,20 +6,15 @@ const ParkInfo = () => {
     const [hours, setHours] = useState([]);
     const [tickets, setTickets] = useState([]);
 
-    const getHours = async(id) => {
-        const response = await fetch("http://localhost:8000/hours" + `/${id}`);
-        console.log(response);
+    const getHours = async() => {
+        // const response = await fetch("http://localhost:8000/hours" + `/${id}`);
 
-        // const jsonData = await response.json();
-        // setHours(jsonData);
+        const response = await fetch("http://localhost:8000/hours/1");
+        const jsonData = await response.json();
+
+        // console.log(jsonData);
+        setHours(jsonData);
     };
-
-    function fn1() {
-        var select = document.getElementById("parkhours");
-        var selected = select.options[select.selectedIndex].value;
-
-        getHours(1);
-    }
 
     const getTickets = async() => {
         const response = await fetch("http://localhost:8000/ticketinfo");
@@ -31,6 +26,8 @@ const ParkInfo = () => {
         getHours();
         getTickets();
     }, []);
+
+    // console.log(hours);
 
     return (
         <>
@@ -46,7 +43,7 @@ const ParkInfo = () => {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        <button onClick={fn1}>Submit</button>
+                        {/* <button onClick={fn1}>Submit</button> */}
                    
                         <table id="hours">
                             <thead>
@@ -58,12 +55,12 @@ const ParkInfo = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {hours.map(hour => (
+                            {hours.map(h => (
                                 <tr>
-                                    <td>{hour.id}</td>
-                                    <td>{hour.city}</td>
-                                    <td>{hour.country}</td>
-                                    <td>{hour.hours}</td>
+                                    <td>{h.id}</td>
+                                    <td>{h.city}</td>
+                                    <td>{h.country}</td>
+                                    <td>{h.hours}</td>
                                 </tr>
                             ))}
                             </tbody>
