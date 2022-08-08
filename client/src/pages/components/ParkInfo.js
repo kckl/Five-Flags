@@ -6,7 +6,7 @@ const ParkInfo = () => {
     const [hours, setHours] = useState([]);
     const [tickets, setTickets] = useState([]);
 
-    const getHours = async() => {
+    const getHours = async(id) => {
         // const response = await fetch("http://localhost:8000/hours" + `/${id}`);
 
         const response = await fetch("http://localhost:8000/hours/1");
@@ -27,7 +27,12 @@ const ParkInfo = () => {
         getTickets();
     }, []);
 
-    // console.log(hours);
+
+    const renderHours = () => {
+        var select = document.getElementById("parkhours");
+        var selected = select.options[select.selectedIndex].value;
+        getHours(selected);
+    }
 
     return (
         <>
@@ -43,7 +48,7 @@ const ParkInfo = () => {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        {/* <button onClick={fn1}>Submit</button> */}
+                        <button onClick={renderHours}>Submit</button>
                    
                         <table id="hours">
                             <thead>
@@ -55,14 +60,12 @@ const ParkInfo = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {hours.map(h => (
-                                <tr>
-                                    <td>{h.id}</td>
-                                    <td>{h.city}</td>
-                                    <td>{h.country}</td>
-                                    <td>{h.hours}</td>
-                                </tr>
-                            ))}
+                            <tr>
+                                <td>{hours.id}</td>
+                                <td>{hours.city}</td>
+                                <td>{hours.country}</td>
+                                <td>{hours.hours}</td>
+                            </tr>
                             </tbody>
                         </table>
                 </div>
