@@ -5,6 +5,7 @@ import img from "../images/FiveFlags.png";
 
 import GetShop from "./components/GetShop";
 import GetDining from "./components/GetDining";
+import ParkInfo from "./components/ParkInfo";
 
 
 
@@ -17,24 +18,31 @@ const GuestView = () => {
     return (
         <>
             <div className="page-container">
-            <div className="header">
-                <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
-                <img className="small-logo" src={img} alt="company logo"></img>
-                <br></br>
-                <p className="info">Learn more about our rides, shopping, and dining options.</p>
-            </div>
-                {/*<div>
-                <button onClick={handleClick}>Browse Shops</button>
-                    {isShown && (
-                        <div>
-                        <h3>Here are our shops:</h3>
-                        </div>
-                    )}
-                    {isShown &&  <GetShop />}           
-                </div>*/}
+                <div className="header">
+                    <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
+                    <img className="small-logo" src={img} alt="company logo"></img>
+                    <br></br>
+                    <p className="info">Learn more about our rides, shopping, dining options, and more.</p>
+                </div>
 
-                <GetDining />
-                <GetShop />
+                <div>
+                    <ul className="nav justify-content-center">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="/">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link active" href="/GuestView">Park Information</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Attractions</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Places to Stay</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <ParkInfo />
             </div>
         </>
     );

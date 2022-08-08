@@ -90,8 +90,8 @@ const GetDining = () => {
                             </tbody>
                         </table>
                 </div>
-            </div>
            
+            </div>   
         </>
     )
 };

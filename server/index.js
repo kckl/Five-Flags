@@ -10,6 +10,8 @@ app.use(express.json());
 app.get("/shop", routes.getShop);
 app.get("/restaurant", routes.getRestaurant);
 app.get("/fastfood", routes.getFastfood);
+app.get("/hours/:id", routes.getHours);
+app.get("/ticketinfo", routes.getTicketInfo);
 
 
 // STAFF VIEW
