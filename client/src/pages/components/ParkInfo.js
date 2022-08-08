@@ -20,10 +20,6 @@ const ParkInfo = () => {
         setTickets(jsonData);
     };
 
-    useEffect(() => {
-        getTickets();
-    }, []);
-
 
     const renderHours = () => {
         var select = document.getElementById("parkhours");
@@ -31,11 +27,16 @@ const ParkInfo = () => {
         getHours(selected);
     }
 
+    useEffect(() => {
+        getTickets();
+    }, []);
+
     return (
         <>
             <div className="ops-box-container">
                 <div className="left-text-container">
                     <h2>Hours</h2>
+                    <div>
                         <p>Choose a park:   </p>
                         <select id="parkhours">
                             <option value="default">Park Number</option>
@@ -46,7 +47,9 @@ const ParkInfo = () => {
                             <option value="5">5</option>
                         </select>
                         <button id="hourssubmit-btn" onClick={renderHours}>Submit</button>
-                   
+                    </div>
+                        
+
                         <table id="hours">
                             <thead>
                             <tr>

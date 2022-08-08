@@ -4,6 +4,7 @@ import img from "../images/FiveFlags.png";
 
 import GetShop from "./components/GetShop";
 import GetDining from "./components/GetDining";
+import Rides from "./components/Rides";
 
 
 
@@ -15,8 +16,6 @@ const ThingsToDo = () => {
                 <div className="header">
                     <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
                     <img className="small-logo" src={img} alt="company logo"></img>
-                    <br></br>
-                    <p className="info">Learn more about our rides, shopping, dining options, and more.</p>
                 </div>
 
                 <div>
@@ -25,7 +24,10 @@ const ThingsToDo = () => {
                             <a className="nav-link active" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="/GuestView">Park Information</a>
+                            <a className="nav-link" href="#">About Us</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/GuestView">Park Information</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/ThingsToDo">Things To Do</a>
@@ -35,8 +37,10 @@ const ThingsToDo = () => {
                         </li>
                     </ul>
                 </div>
-
+                
                 <GetDining />
+                <Rides />
+                <GetShop />
                 
                 
             </div>

@@ -2,7 +2,7 @@ const pool = require("./db");
 
 // GUEST VIEW
 const getShop = async (req, res) => {
-    const allShop = await pool.query("SELECT * FROM Shop_Category ORDER BY Park_ID");
+    const allShop = await pool.query("SELECT name, category FROM Shop_Category ORDER BY name");
     res.json(allShop.rows);
 };
 

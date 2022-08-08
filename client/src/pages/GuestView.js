@@ -14,8 +14,6 @@ const GuestView = () => {
                 <div className="header">
                     <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
                     <img className="small-logo" src={img} alt="company logo"></img>
-                    <br></br>
-                    <p className="info">Learn more about our rides, shopping, dining options, and more.</p>
                 </div>
 
                 <div>
@@ -24,7 +22,10 @@ const GuestView = () => {
                             <a className="nav-link active" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="/GuestView">Park Information</a>
+                            <a className="nav-link active" href="#">About Us</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/GuestView">Park Information</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/ThingsToDo">Things To Do</a>

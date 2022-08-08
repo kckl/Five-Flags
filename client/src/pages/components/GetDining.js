@@ -19,9 +19,6 @@ const GetDining = () => {
             setFastfoods(jsonData);
     };
 
-    // useEffect(() => {
-    //     getFastfoods();
-    // });
 
     const renderRestaurants = () => {
         var selectID = document.getElementById("restaurantparkid");
