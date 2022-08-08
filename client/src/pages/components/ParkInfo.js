@@ -60,14 +60,20 @@ const ParkInfo = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {hours.map(hour => (
+                            <tr>
+                                <td>{hours.id}</td>
+                                <td>{hours.city}</td>
+                                <td>{hours.country}</td>
+                                <td>{hours.hours}</td>
+                            </tr>
+                            {/* {hours.map(hour => {
                                 <tr>
-                                    <td>{hours.id}</td>
-                                    <td>{hours.city}</td>
-                                    <td>{hours.country}</td>
-                                    <td>{hours.hours}</td>
+                                <td>{hour.id}</td>
+                                <td>{hour.city}</td>
+                                <td>{hour.country}</td>
+                                <td>{hour.hours}</td>
                                 </tr>
-                                ))}
+                            })} */}
                             </tbody>
                         </table>
                 </div>

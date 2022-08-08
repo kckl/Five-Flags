@@ -55,7 +55,7 @@ const GetDining = () => {
                         </select>
                         <button id="diningsubmit-btn" onClick={renderRestaurants}>Submit</button>
                 </div>
-                <br></br>
+                <hr></hr>
                 
 
                     <h2>Restaurants</h2>
@@ -86,7 +86,7 @@ const GetDining = () => {
     
                 <div className="right-text-container">
                     <br></br>
-                    <br></br>
+                    <hr></hr>
                     <h2>Fast Food</h2>
                         <table id="fastfood">
                             <thead>
