@@ -29,6 +29,11 @@ const getTicketInfo = async (req, res) => {
     res.json(allTicketInfo.rows);
 };
 
+const getHotel = async (req, res) => {
+    const allHotel = await pool.query("SELECT * FROM Hotel_LocatedNear ORDER BY Park_ID");
+    res.json(allHotel.rows);
+};
+
 // STAFF VIEW
 // GET routes
 const getStaff = async (req, res) => {
@@ -136,6 +141,7 @@ module.exports = {
     getFastfood,
     getHours,
     getTicketInfo,
+    getHotel,
     getStaff, 
     getRides, 
     getParks, 

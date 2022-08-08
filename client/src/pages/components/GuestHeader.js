@@ -18,16 +18,13 @@ const GuestHeader = () => {
                             <a className="nav-link active" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">About Us</a>
-                        </li>
-                        <li className="nav-item">
                             <a className="nav-link" href="/GuestView">Park Information</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/ThingsToDo">Things To Do</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Places To Stay</a>
+                            <a className="nav-link" href="/PlacesToStay">Places To Stay</a>
                         </li>
                     </ul>
                 </div>

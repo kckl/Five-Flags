@@ -31,10 +31,14 @@ const GetDining = () => {
             getRestaurants(selectedID);
         } else if (selectedType == "fastfood") {
             getFastfoods(selectedID);
-        } else {
+        } else if (selectedType == "all"){
             getRestaurants(selectedID);
             getFastfoods(selectedID);
         }   
+    }
+
+    const refresh = () => {
+        window.location.reload();
     }
 
     return (
@@ -58,8 +62,8 @@ const GetDining = () => {
                             <option value="fastfood">Fast Food</option>
                         </select>
 
-
                         <button id="diningsubmit-btn" onClick={renderRestaurants}>Submit</button>
+                        <button id="diningreset-btn" onClick={refresh}>Reset</button>
                 </div>
                 <hr></hr>
                 

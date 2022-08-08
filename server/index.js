@@ -12,6 +12,7 @@ app.get("/restaurant/:id", routes.getRestaurant);
 app.get("/fastfood/:id", routes.getFastfood);
 app.get("/hours/:id", routes.getHours);
 app.get("/ticketinfo", routes.getTicketInfo);
+app.get("/hotel", routes.getHotel);
 
 
 // STAFF VIEW
