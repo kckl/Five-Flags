@@ -27,9 +27,17 @@ const GetDining = () => {
         var selectPrice = document.getElementById("restaurantprice");
         var selectedPrice = selectPrice.options[selectPrice.selectedIndex].value;
 
+        var selectType = document.getElementById("diningtype");
+        var selectedType = selectType.options[selectType.selectedIndex].value;
 
-        getRestaurants(selectedID, selectedPrice);
-        getFastfoods(selectedID, selectedPrice);
+        if (selectedType == "restaurant") {
+            getRestaurants(selectedID, selectedPrice);
+        } else if (selectedType == "fastfood") {
+            getFastfoods(selectedID, selectedPrice);
+        } else {
+            getRestaurants(selectedID, selectedPrice);
+            getFastfoods(selectedID, selectedPrice);
+        }   
     }
 
     return (
@@ -37,9 +45,9 @@ const GetDining = () => {
             <div className="ops-box-container">
                 <div className="left-text-container">
                 <div>
-                    <p>Choose a park:   </p>
+                    <p>Choose options:   </p>
                         <select id="restaurantparkid">
-                            <option value="default">Park Number</option>
+                            <option disabled selected value> -- parks -- </option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -47,11 +55,17 @@ const GetDining = () => {
                             <option value="5">5</option>
                         </select>
                         <select id="restaurantprice">
-                            <option value="default">Price</option>
+                            <option disabled selected value> -- price -- </option>
                             <option value="$">$</option>
                             <option value="$$">$$</option>
                             <option value="$$$">$$$</option>
                             <option value="$$$$">$$$$</option>
+                        </select>
+                        <select id="diningtype">
+                            <option disabled selected value> -- type -- </option>
+                            <option value="all">All</option>
+                            <option value="restaurant">Restaurants</option>
+                            <option value="fastfood">Fast Food</option>
                         </select>
                         <button id="diningsubmit-btn" onClick={renderRestaurants}>Submit</button>
                 </div>

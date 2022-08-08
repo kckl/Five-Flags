@@ -39,7 +39,7 @@ const ParkInfo = () => {
                     <div>
                         <p>Choose a park:   </p>
                         <select id="parkhours">
-                            <option value="default">Park Number</option>
+                            <option disabled selected value> -- select an option -- </option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
