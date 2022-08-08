@@ -1,5 +1,4 @@
 DROP TABLE Works_For;
--- DROP TABLE Visit;
 DROP TABLE Dines;
 DROP TABLE Enjoy;
 DROP TABLE Shop;
@@ -166,14 +165,6 @@ CREATE TABLE Dines (
     FOREIGN KEY (Dining_Name) REFERENCES Dining_Offer(Name) ON DELETE CASCADE ON UPDATE CASCADE 
 );
 
--- CREATE TABLE Visit (
---     Guest_ID int,
---     Park_ID int,
---     PRIMARY KEY (Guest_ID, Park_ID),
---     FOREIGN KEY (Guest_ID) REFERENCES Guest(ID) ON DELETE CASCADE,
---     FOREIGN KEY (Park_ID) REFERENCES Park(ID) ON DELETE CASCADE
--- );
-
 CREATE TABLE Works_For (
     Staff_ID int,
     Park_ID int,
@@ -209,15 +200,15 @@ INSERT INTO Hotel_LocatedNear VALUES('789 Vancouver Street', 'Hyatt', '$$$$', 4,
 INSERT INTO Hotel_LocatedNear VALUES('30 Berlin Road', 'Wyndham', '$$', 3, 5); 
 INSERT INTO Hotel_LocatedNear VALUES('322 Peru Avenue', 'Choice', '$', 4, 4); 
 
-INSERT INTO Guest VALUES(11111, 'Splinter', 65, 'Sewers, NY', 'Splinter@gmail.com', 3742454554001265); 
-INSERT INTO Guest VALUES(22222, 'Leonardo', 17, 'Sewers, NY', 'Leonardo@gmail.com', NULL); 
+INSERT INTO Guest VALUES(11111, 'Splinter', 65, 'Sewers, NY', 'Splinter@hotmail.com', 3742454554001265); 
+INSERT INTO Guest VALUES(22222, 'Leonardo', 17, 'Sewers, NY', 'Leonardo@yahoo.com', NULL); 
 INSERT INTO Guest VALUES(33333, 'Raphael', 17, 'Sewers, NY', 'Raphael@gmail.com', NULL); 
 INSERT INTO Guest VALUES(44444, 'Donatello', 17, 'Sewers, NY', 'Donatello@gmail.com', NULL); 
-INSERT INTO Guest VALUES(55555, 'Michelangelo', 17, 'Sewers, NY', 'Michelangelo@gmail.com', NULL);
-INSERT INTO Guest VALUES(66666, 'Ken', 26, 'Vancouver, BC', 'bozo@gmail.com', NULL); 
-INSERT INTO Guest VALUES(88888, 'Allon', 23, 'Richmond, VA', 'leg@gmail.com', 3792421555486251); 
+INSERT INTO Guest VALUES(55555, 'Michelangelo', 17, 'Sewers, NY', 'Michelangelo@hotmail.com', NULL);
+INSERT INTO Guest VALUES(66666, 'Ken', 26, 'Vancouver, BC', 'ken@yahoo.com', NULL); 
+INSERT INTO Guest VALUES(88888, 'Allon', 23, 'Richmond, VA', 'allan@gmail.com', 3792421555486251); 
 INSERT INTO Guest VALUES(99999, 'Jirby', 24, 'Banff, AB', 'garrix@gmail.com', 3888420420540154); 
-INSERT INTO Guest VALUES(15121, 'Trung', 57, 'Ho Chi Minh, Vietnam', 'egg@gmail.com', NULL); 
+INSERT INTO Guest VALUES(15121, 'Trung', 57, 'Ho Chi Minh, Vietnam', 'egg@hotmail.com', NULL); 
 
 INSERT INTO Park_Hours VALUES(1, '6:00AM - 10:00PM');
 INSERT INTO Park_Hours VALUES(2, '6:30AM - 10:00PM');
@@ -347,12 +338,6 @@ INSERT INTO Dines VALUES(22222, 'Popcorn Kitchen');
 INSERT INTO Dines VALUES(33333, '5 Flags Express');
 INSERT INTO Dines VALUES(44444, 'The Keg');
 INSERT INTO Dines VALUES(55555, 'Trader Flags Lounge');
-
--- INSERT INTO Visit VALUES(11111, 1);
--- INSERT INTO Visit VALUES(22222, 2);
--- INSERT INTO Visit VALUES(33333, 3);
--- INSERT INTO Visit VALUES(44444, 4);
--- INSERT INTO Visit VALUES(55555, 5);
 
 INSERT INTO Works_For VALUES(00001, 1);
 INSERT INTO Works_For VALUES(00002, 2);

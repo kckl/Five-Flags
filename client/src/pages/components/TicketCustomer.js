@@ -67,31 +67,6 @@ const TicketCustomer = () => {
                             </tbody>
                         </table>
                 </div>
-            
-                <div className="text-container">
-                    <div>
-                        <h2 id="ticketcustomer">Loyal Customers</h2><button type="submit" id="loyaltyButton" onClick={getLoyalty}>Get Customers</button>
-                    </div>
-                    <p id="definition">Defined as those customers who have visited any park globally 3 or more times</p>
-                    <table id="customers">
-                        <thead>
-                            <tr>
-                            <th>Guest #</th>
-                            <th>Guest Name</th>
-                            <th># of Visits Globally</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {loyalty.map(l => (
-                                <tr>
-                                    <td>{l.guest_id}</td>
-                                    <td>{l.name}</td>
-                                    <td>{l.visits}</td>
-                                </tr>
-                                ))}
-                        </tbody>
-                    </table>
-                </div>
 
                 <div className="text-container">
                     <div>
