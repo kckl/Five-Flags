@@ -7,14 +7,14 @@ const GetDining = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [fastfoods, setFastfoods] = useState([]);
 
-    const getRestaurants = async(id, price) => {
-            const response = await fetch("http://localhost:8000/restaurant" + `/${id}` + `/${price}`);
+    const getRestaurants = async(id) => {
+            const response = await fetch("http://localhost:8000/restaurant" + `/${id}`);
             const jsonData = await response.json();
             setRestaurants(jsonData);
     };
 
-    const getFastfoods = async(id, price) => {
-            const response = await fetch("http://localhost:8000/fastfood" + `/${id}` + `/${price}`);
+    const getFastfoods = async(id) => {
+            const response = await fetch("http://localhost:8000/fastfood" + `/${id}`);
             const jsonData = await response.json();
             setFastfoods(jsonData);
     };
@@ -24,19 +24,16 @@ const GetDining = () => {
         var selectID = document.getElementById("restaurantparkid");
         var selectedID = selectID.options[selectID.selectedIndex].value;
 
-        var selectPrice = document.getElementById("restaurantprice");
-        var selectedPrice = selectPrice.options[selectPrice.selectedIndex].value;
-
         var selectType = document.getElementById("diningtype");
         var selectedType = selectType.options[selectType.selectedIndex].value;
 
         if (selectedType == "restaurant") {
-            getRestaurants(selectedID, selectedPrice);
+            getRestaurants(selectedID);
         } else if (selectedType == "fastfood") {
-            getFastfoods(selectedID, selectedPrice);
+            getFastfoods(selectedID);
         } else {
-            getRestaurants(selectedID, selectedPrice);
-            getFastfoods(selectedID, selectedPrice);
+            getRestaurants(selectedID);
+            getFastfoods(selectedID);
         }   
     }
 
@@ -54,19 +51,14 @@ const GetDining = () => {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        <select id="restaurantprice">
-                            <option disabled selected value> -- price -- </option>
-                            <option value="$">$</option>
-                            <option value="$$">$$</option>
-                            <option value="$$$">$$$</option>
-                            <option value="$$$$">$$$$</option>
-                        </select>
                         <select id="diningtype">
                             <option disabled selected value> -- type -- </option>
                             <option value="all">All</option>
                             <option value="restaurant">Restaurants</option>
                             <option value="fastfood">Fast Food</option>
                         </select>
+
+
                         <button id="diningsubmit-btn" onClick={renderRestaurants}>Submit</button>
                 </div>
                 <hr></hr>

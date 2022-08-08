@@ -8,8 +8,8 @@ app.use(express.json());
 
 // GUEST VIEW
 app.get("/shop", routes.getShop);
-app.get("/restaurant/:id/:price", routes.getRestaurant);
-app.get("/fastfood/:id/:price", routes.getFastfood);
+app.get("/restaurant/:id", routes.getRestaurant);
+app.get("/fastfood/:id", routes.getFastfood);
 app.get("/hours/:id", routes.getHours);
 app.get("/ticketinfo", routes.getTicketInfo);
 
