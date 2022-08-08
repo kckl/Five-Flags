@@ -17,7 +17,7 @@ const GuestView = () => {
                 </div>
 
                 <div>
-                    <ul className="nav justify-content-center">
+                    <ul className="navbar">
                         <li className="nav-item">
                             <a className="nav-link active" href="/">Home</a>
                         </li>
