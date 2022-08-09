@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './BIView.css';
+import img from "../images/FiveFlags.png";
+
 
 import TicketCustomer from "./components/TicketCustomer";
 import Loyalty from "./components/Loyalty";
@@ -9,9 +11,13 @@ const BI = () => {
 
     return (
         <>
+
             <div className="bi-page-container">
                 <div className="header">
                     <h1>Business Intelligence Dashboard</h1>
+                    <Link to="/">
+                    <img className="small-logo" src={img} alt="company logo"></img>
+                    </Link>
                 </div>
             <div className="bi">
                 <p>For the park operations dashboard, please click here: </p>
