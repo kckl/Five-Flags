@@ -14,7 +14,6 @@ app.get("/hours/:id", routes.getHours);
 app.get("/ticketinfo", routes.getTicketInfo);
 app.get("/hotel", routes.getHotel);
 
-
 // STAFF VIEW
 app.get("/staff", routes.getStaff);
 app.get("/rides", routes.getRides);
