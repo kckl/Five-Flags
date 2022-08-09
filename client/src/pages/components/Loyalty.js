@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './Loyalty.css';
 const loyaltyUrl = "http://localhost:8000/loyalty/"
 const globalistUrl = "http://localhost:8000/globalist/"
 

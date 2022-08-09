@@ -13,7 +13,7 @@ const Hotels = () => {
     };
 
     useEffect(() => {
-        getHotel();
+        // getHotel();
     });
 
 
@@ -21,7 +21,8 @@ const Hotels = () => {
         <>
             <div className="ops-box-container">
                 <div className="text-container">
-                <h2>Hotels</h2>
+                    <h2 id="hotels">Hotels</h2>
+                    <button type="submit" id="salesButton" onClick={getHotel}>See Hotels</button>
                         <table id="hotel">
                             <thead>
                             <tr>
@@ -40,7 +41,6 @@ const Hotels = () => {
                                     <td>{hotel.price}</td>
                                 </tr>
                                 ))}
-                
                             </tbody>
                         </table>
                     </div>
