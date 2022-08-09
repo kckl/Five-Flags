@@ -15,13 +15,16 @@ const StaffView = () => {
             <div className="staff-page-container">
             <div className="header">
                 <div className="welcome"><h1>Welcome to the Five Flags Park Operations Dashboard!</h1></div>
-                <img className="small-logo" src={img} alt="company logo"></img>
+                <Link to= "/">
+                    <img className="small-logo" src={img} alt="company logo"></img>
+                </Link>
             </div>
             <div className="bi">
                 <p>For the business intelligence dashboard, please click here: </p>
                 <Link to="/BIDashboard">
                     <button type="button" onClick>BI Dashboard</button>
                 </Link>
+
             </div>
                 <AddOperations />
                 {/* <Updates /> */}
