@@ -30,7 +30,7 @@ const getTicketInfo = async (req, res) => {
 };
 
 const getHotel = async (req, res) => {
-    const allHotel = await pool.query("SELECT * FROM Hotel_LocatedNear ORDER BY Park_ID");
+    const allHotel = await pool.query("SELECT address, brand, price, park_id FROM Hotel_LocatedNear ORDER BY Park_ID");
     res.json(allHotel.rows);
 };
 

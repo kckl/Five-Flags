@@ -29,7 +29,6 @@ const Hotels = () => {
                                 <th>Brand</th>
                                 <th>Address</th>
                                 <th>Price</th>
-                                <th>Proximity</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -39,7 +38,6 @@ const Hotels = () => {
                                     <td>{hotel.brand}</td>
                                     <td>{hotel.address}</td>
                                     <td>{hotel.price}</td>
-                                    <td>{hotel.proximity} km</td>
                                 </tr>
                                 ))}
                 
