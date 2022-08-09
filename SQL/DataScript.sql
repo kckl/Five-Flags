@@ -317,6 +317,8 @@ INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 1, 10, 30);
 INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 2, 10, 30);
 INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 3, 10, 30);
 INSERT INTO Ride_Info VALUES('Star Wars: Rise of the Resistance', 5, 10, 30);
+INSERT INTO Ride_Info VALUES('Pirates of the Caspian ', 4, 4, 60);
+INSERT INTO Ride_Info VALUES('Pirates of the Caspian ', 5, 4, 60);
 
 INSERT INTO Stay VALUES(11111, '123 Dubai Street', '1997-01-01', '1998-01-01');
 INSERT INTO Stay VALUES(22222, '123 Dubai Street', '1997-01-01', '1998-01-01');
