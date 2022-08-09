@@ -25,6 +25,10 @@
     width: 45%;
 }
 
+.diningoptions {
+    align-items: center;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -47,9 +51,12 @@ tbody tr:hover {
 }
 
 #restaurantparkid, #diningtype, #diningcol {
+    margin-top: 10px;
     margin-right: 10px;
+    align-items: center;
 }
 
-#diningsubmit-btn {
-    margin-right: 10px;
+#diningsubmit-btn, #diningreset-btn {
+    margin-top: 10px;
+    margin-right: 5px;
 }

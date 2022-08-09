@@ -5,11 +5,15 @@ const ParkInfo = () => {
 
     const [hours, setHours] = useState([]);
     const [tickets, setTickets] = useState([]);
+    const [isShown, setIsShown] = useState(false);
+
+    const handleClick = event => {    
+        setIsShown(true);
+    };   
 
     const getHours = async(id) => {
         const response = await fetch("http://localhost:8000/hours" + `/${id}`);
         const jsonData = await response.json();
-
         setHours(jsonData);
     };
 
@@ -21,6 +25,7 @@ const ParkInfo = () => {
 
 
     const renderHours = () => {
+        handleClick();
         var select = document.getElementById("parkhours");
         var selected = select.options[select.selectedIndex].value;
         getHours(selected);
@@ -48,7 +53,7 @@ const ParkInfo = () => {
                         <button id="hourssubmit-btn" onClick={renderHours}>Submit</button>
                     </div>
                         
-
+                    {isShown && (<div>
                         <table id="hours">
                             <thead>
                             <tr>
@@ -75,6 +80,7 @@ const ParkInfo = () => {
                             })} */}
                             </tbody>
                         </table>
+                        </div>)}
                 </div>
 
                 <div className="right-text-container">
