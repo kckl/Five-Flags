@@ -81,6 +81,7 @@ INSERT INTO Dining_Offer VALUES('Popcorn Kitchen', '$', 2);
 INSERT INTO Dining_Offer VALUES('5 Flags Express', '$$', 1);
 INSERT INTO Dining_Offer VALUES('The Confectionary', '$$', 3);
 INSERT INTO Dining_Offer VALUES('Burger Queen', '$', 4);
+INSERT INTO Dining_Offer VALUES('McFiveFlags', '$', 5);
 
 INSERT INTO Restaurant VALUES('The Keg', 100, 'American');
 INSERT INTO Restaurant VALUES('Trader Flags Lounge', 250, 'Hawaiian');
@@ -93,6 +94,7 @@ INSERT INTO FastFood VALUES('Popcorn Kitchen', 'Snacks');
 INSERT INTO FastFood VALUES('5 Flags Express', 'Dessert');
 INSERT INTO FastFood VALUES('The Confectionary', 'Ice Cream');
 INSERT INTO FastFood VALUES('Burger Queen', 'Burgers');
+INSERT INTO FastFood VALUES('McFiveFlags', 'Burgers');
 
 INSERT INTO Ride_Restriction VALUES(8, 50, 'Must be 44 inches');
 INSERT INTO Ride_Restriction VALUES(8, 30, 'Must be 44 inches');

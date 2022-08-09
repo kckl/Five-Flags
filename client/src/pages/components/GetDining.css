@@ -46,7 +46,7 @@ tbody tr:hover {
     background-color: rgb(190,190,190);
 }
 
-#restaurantparkid, #restaurantprice, #diningtype {
+#restaurantparkid, #diningtype {
     margin-right: 10px;
 }
 
