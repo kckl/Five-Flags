@@ -24,27 +24,27 @@ const Hotels = () => {
                 <div className="text-container">
                     <h2 id="hotels">Hotels</h2>
                     <button type="submit" id="salesButton" onClick={getHotel}>See Hotels</button>
-                        <table id="hotel">
-                            <thead>
-                            <tr>
-                                <th>Park #</th>
-                                <th>Brand</th>
-                                <th>Address</th>
-                                <th>Price</th>
+                    <table id="hotel">
+                        <thead>
+                        <tr>
+                            <th>Park #</th>
+                            <th>Brand</th>
+                            <th>Address</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {hotels.map(hotel => (
+                                <tr>
+                                <td>{hotel.park_id}</td>
+                                <td>{hotel.brand}</td>
+                                <td>{hotel.address}</td>
+                                <td>{hotel.price}</td>
                             </tr>
-                            </thead>
-                            <tbody>
-                                {hotels.map(hotel => (
-                                    <tr>
-                                    <td>{hotel.park_id}</td>
-                                    <td>{hotel.brand}</td>
-                                    <td>{hotel.address}</td>
-                                    <td>{hotel.price}</td>
-                                </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </>
     )

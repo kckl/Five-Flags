@@ -85,26 +85,24 @@ const ParkInfo = () => {
 
                 <div className="right-text-container">
                     <h2>Tickets</h2>
-                        <p>Prices in USD per ticket.</p>
-                        <table id="ticketinfo">
-                            <thead>
+                    <p>Prices in USD per ticket.</p>
+                    <table id="ticketinfo">
+                        <thead>
                             <tr>
                                 <th>Type</th>
                                 <th>Price</th>
                             </tr>
-                            </thead>
-                            <tbody>
-                            {tickets.map(ticket => (
-                                                <tr>
-                                                    <td>{ticket.type}</td>
-                                                    <td>${ticket.price}</td>
-                                                </tr>
-                                            ))}
-                            
-                            </tbody>
-                        </table>
+                        </thead>
+                        <tbody>
+                        {tickets.map(ticket => (
+                            <tr>
+                                <td>{ticket.type}</td>
+                                <td>${ticket.price}</td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
                 </div>
-
             </div>
         </>
     )

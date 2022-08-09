@@ -7,10 +7,10 @@ const GetShop = () => {
     const [rides, setRides] = useState([]);
 
     const getShops = async () => {
-            const response = await fetch("http://localhost:8000/shop");
-            const jsonData = await response.json();
+        const response = await fetch("http://localhost:8000/shop");
+        const jsonData = await response.json();
 
-            setShops(jsonData);
+        setShops(jsonData);
     };
 
     const getRides = async () => {
@@ -27,7 +27,6 @@ const GetShop = () => {
 
     return (
         <>
-        
             <div className="ops-box-container">
                 <div className="left-text-container">
                     <h2>Shopping</h2>

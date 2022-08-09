@@ -11,22 +11,21 @@ const BI = () => {
 
     return (
         <>
-
             <div className="bi-page-container">
-                <div className="header">
-                    <h1>Business Intelligence Dashboard</h1>
-                    <Link to="/">
-                    <img className="small-logo" src={img} alt="company logo"></img>
+                    <div className="header">
+                        <h1>Business Intelligence Dashboard</h1>
+                        <Link to="/">
+                            <img className="small-logo" src={img} alt="company logo"></img>
+                        </Link>
+                    </div>
+                <div className="bi">
+                    <p>For the park operations dashboard, please click here: </p>
+                    <Link to="/StaffView">
+                        <button type="button" onClick>Ops Dashboard</button>
                     </Link>
                 </div>
-            <div className="bi">
-                <p>For the park operations dashboard, please click here: </p>
-                <Link to="/StaffView">
-                    <button type="button" onClick>Ops Dashboard</button>
-                </Link>
-            </div>
-            <TicketCustomer />
-            <Loyalty />
+                <TicketCustomer />
+                <Loyalty />
             </div>
         </>
     );

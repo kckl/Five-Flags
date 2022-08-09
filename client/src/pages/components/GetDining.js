@@ -96,13 +96,11 @@ const GetDining = () => {
                             <button id="diningreset-btn" onClick={refresh}>Reset</button>
                     </div>
                 </div>
-            
-
     
                 <div className="right-text-container">
-                {ffIsShown && (<div>
-                    
-                    <h4>Fast Food</h4>
+                    {ffIsShown && (<div>
+                        
+                        <h4>Fast Food</h4>
                         <table id="fastfood">
                             <thead>
                             <tr>
@@ -113,45 +111,43 @@ const GetDining = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {fastfoods.map(fastfood => (
-                                                <tr>
-                                                    <td>{fastfood.park_id}</td>
-                                                    <td>{fastfood.name}</td>
-                                                    <td>{fastfood.type}</td>
-                                                    <td>{fastfood.price}</td>
-                                                </tr>
-                                            ))}
-                            
+                                {fastfoods.map(fastfood => (
+                                    <tr>
+                                        <td>{fastfood.park_id}</td>
+                                        <td>{fastfood.name}</td>
+                                        <td>{fastfood.type}</td>
+                                        <td>{fastfood.price}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
-                        </div>)}
+                    </div>)}
 
-                {rIsShown && (<div>
-                                <h4>Restaurants</h4>
-                                <table id="restaurant">
-                                    <thead>
+                    {rIsShown && (<div>
+                        <h4>Restaurants</h4>
+                        <table id="restaurant">
+                            <thead>
+                            <tr>
+                                <th>Park #</th>
+                                <th>Name</th>
+                                <th>Cuisine</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {restaurants.map(restaurant => (
                                     <tr>
-                                        <th>Park #</th>
-                                        <th>Name</th>
-                                        <th>Cuisine</th>
-                                        <th>Price</th>
+                                        <td>{restaurant.park_id}</td>
+                                        <td>{restaurant.name}</td>
+                                        <td>{restaurant.cuisine}</td>
+                                        <td>{restaurant.price}</td>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                        {restaurants.map(restaurant => (
-                                            <tr>
-                                            <td>{restaurant.park_id}</td>
-                                            <td>{restaurant.name}</td>
-                                            <td>{restaurant.cuisine}</td>
-                                            <td>{restaurant.price}</td>
-                                        </tr>
-                                        ))}
-                        
-                                    </tbody>
-                                </table>
-                            </div>)}
+                                ))}
+                
+                            </tbody>
+                        </table>
+                    </div>)}
                 </div>
-           
             </div>   
         </>
     )

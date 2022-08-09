@@ -5,7 +5,6 @@ import img from "../images/FiveFlags.png";
 
 // table components
 import AddOperations from "./components/AddOperations";
-import Updates from "./components/Updates";
 import Operations from "./components/Operations";
 
 
@@ -27,7 +26,6 @@ const StaffView = () => {
 
             </div>
                 <AddOperations />
-                {/* <Updates /> */}
                 <Operations />
             </div>
         </>

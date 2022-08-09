@@ -50,22 +50,22 @@ const TicketCustomer = () => {
                         <h2 id="ticketcustomer">Ticket Sales</h2><button type="submit" id="salesButton" onClick={getTicketSales}>Get Sales</button>
                     </div>
                     <p id="definition">Total ticket sales for each ticket type</p>
-                        <table id="ticketsales">
-                            <thead>
+                    <table id="ticketsales">
+                        <thead>
+                        <tr>
+                            <th>Ticket Type</th>
+                            <th>Sales</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {ticketsales.map(ticketsale => (
                             <tr>
-                                <th>Ticket Type</th>
-                                <th>Sales</th>
+                                <td>{ticketsale.type}</td>
+                                <td>{ticketsale.count}</td>  
                             </tr>
-                            </thead>
-                            <tbody>
-                            {ticketsales.map(ticketsale => (
-                                <tr>
-                                    <td>{ticketsale.type}</td>
-                                    <td>{ticketsale.count}</td>  
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
+                        ))}
+                        </tbody>
+                    </table>
                 </div>
 
                 <div className="text-container">
