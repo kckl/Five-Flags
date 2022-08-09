@@ -9,6 +9,8 @@ const GetDining = () => {
     const [ffIsShown, setFFIsShown] = useState(false);
     const [rIsShown, setRIsShown] = useState(false);
 
+    var testing = document.getElementById("diningcol");
+
     // const handleClick = event => {    
     //      setIsShown(true);
     // };
@@ -71,8 +73,8 @@ const GetDining = () => {
                         <h2>Dining</h2>
                         <p>Choose options:   </p>
                         <br></br>
-                            <select id="restaurantparkid">
-                                <option disabled selected value> -- parks -- </option>
+                            <select id="restaurantparkid" >
+                                <option value="" disabled selected> -- parks -- </option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -80,13 +82,13 @@ const GetDining = () => {
                                 <option value="5">5</option>
                             </select>
                             <select id="diningtype">
-                                <option disabled selected value> -- type -- </option>
+                                <option value="" disabled selected> -- type -- </option>
                                 <option value="all">All</option>
                                 <option value="restaurant">Restaurants</option>
                                 <option value="fastfood">Fast Food</option>
                             </select>
                             <select id="diningcol">
-                                <option disabled selected value> -- other -- </option>
+                                <option value="" disabled selected> -- other -- </option>
                                 <option value="price">Price</option>
                                 <option value="cuisine">Cuisine</option>
                             </select>
@@ -106,7 +108,7 @@ const GetDining = () => {
                             <tr>
                                 <th>Park #</th>
                                 <th>Name</th>
-                                <th>Type</th>
+                                <th>Cuisine</th>
                                 <th>Price</th>
                             </tr>
                             </thead>
