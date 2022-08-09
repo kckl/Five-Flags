@@ -25,6 +25,8 @@ app.get("/food", routes.getFood);
 app.get("/ticketsales", routes.getTicketSales);
 app.get("/loyalty", routes.getLoyal);
 app.get("/thrillingride", routes.getThrillingRide);
+app.get("/relaxingride", routes.getRelaxingRide);
+app.get("/averagethrill", routes.getAverageThrill);
 app.get("/globalist", routes.getGlobalist);
 
 app.post("/staff", routes.addStaff);

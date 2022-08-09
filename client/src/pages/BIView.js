@@ -6,6 +6,7 @@ import img from "../images/FiveFlags.png";
 
 import TicketCustomer from "./components/TicketCustomer";
 import Loyalty from "./components/Loyalty";
+import ThrillingRides from "./components/ThrillingRides";
 
 const BI = () => {
 
@@ -25,6 +26,7 @@ const BI = () => {
                     </Link>
                 </div>
                 <TicketCustomer />
+                <ThrillingRides />
                 <Loyalty />
             </div>
         </>

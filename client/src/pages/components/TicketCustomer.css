@@ -5,7 +5,7 @@
 }
 
 
-#loyaltyButton, #salesButton, #thrillingButton {
+#loyaltyButton, #salesButton, #thrillingButton, #relaxingButton, #averageButton {
     float: right;
     height: 35px;
     width: 150px;

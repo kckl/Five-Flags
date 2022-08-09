@@ -79,6 +79,16 @@ const getThrillingRide = async (req, res) => {
     res.json(thrillingRide.rows);
 };
 
+const getRelaxingRide = async (req, res) => {
+    const relaxingRide = await pool.query("SELECT * FROM ride_info WHERE thrill_level <= (SELECT AVG(thrill_level) FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count) ORDER BY Park_ID ASC");
+    res.json(relaxingRide.rows);
+};
+
+const getAverageThrill = async (req, res) => {
+    const averageThrill = await pool.query('SELECT ROUND(AVG(thrill_level) ,2) AS "roundedAvg" FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count;');
+    res.json(averageThrill.rows);
+}
+
 // POST routes
 const addStaff = async (req, res) => {
     const { staffName, role } = req.body;
@@ -138,6 +148,8 @@ module.exports = {
     getFood, 
     getTicketSales,
     getThrillingRide,
+    getRelaxingRide,
+    getAverageThrill,
     addStaff, 
     addRide, 
     addFood, 
