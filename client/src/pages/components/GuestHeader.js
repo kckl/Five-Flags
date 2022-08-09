@@ -1,6 +1,7 @@
 import React from "react";
 import './GuestHeader.css';
 import img from "../../images/FiveFlags.png";
+import { Link } from "react-router-dom";
 
 
 const GuestHeader = () => {
@@ -9,7 +10,9 @@ const GuestHeader = () => {
         <>
                 <div className="header">
                     <div className="welcome"><h1>Welcome to the Five Flags Park Guest Experience Dashboard!</h1></div>
-                    <img className="small-logo" src={img} alt="company logo"></img>
+                    <Link to="/">
+                        <img className="small-logo" src={img} alt="company logo"></img>
+                    </Link>
                 </div>
 
                 <div>

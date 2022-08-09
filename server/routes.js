@@ -119,24 +119,11 @@ const updateRide = async (req, res) => {
     res.json("Ride was updated!") ;
 }
 
-// DELETE routes
-// const deleteStaff = async (req, res) => {
-//     const { id } = req.params;
-//     const staff = await pool.query("DELETE FROM Staff_ID WHERE id = $1", [id]);
-//     res.json(`Staff #${id} was deleted!`);
-// };
-
 const deletePark = async (req, res) => {
     const { id } = req.params;
     const park = await pool.query("DELETE FROM Park WHERE ID = $1", [id]);
     res.json(`Park #${id} was deleted!`);
 };
-
-// const deleteFood = async (req, res) => {
-//     const name = req.params.name;
-//     const ride = await pool.query("DELETE FROM Dining_Offer WHERE Name = $1", [name]);
-//     res.json(`${name} was deleted!`);
-// };
 
 module.exports = { 
     getShop, 
@@ -156,15 +143,11 @@ module.exports = {
     addFood, 
     updateFood,
     updateRide, 
-    // deleteStaff, 
-    // deleteRide, 
     getLoyal,
     getGlobalist,
     addStaff, 
     addRide, 
     addFood, 
     updateFood, 
-    // deleteStaff, 
     deletePark, 
-    // deleteFood 
 };
