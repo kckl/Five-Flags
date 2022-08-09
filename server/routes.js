@@ -8,13 +8,15 @@ const getShop = async (req, res) => {
 
 const getRestaurant = async (req, res) => {
     const { id } = req.params;
-    const allRestaurant = await pool.query("SELECT d.name, price, cuisine, park_id FROM Dining_offer d, Restaurant r WHERE d.name=r.name AND park_id =$1 ORDER BY Price", [id]);
+    const { att1 } = req.params;
+    const allRestaurant = await pool.query(`SELECT park_id, d.name, ${att1} FROM Dining_offer d, Restaurant r WHERE d.name=r.name AND park_id = ${id} ORDER BY Price`);
     res.json(allRestaurant.rows);
 };
 
 const getFastfood = async (req, res) => {
     const { id } = req.params;
-    const allFastfood = await pool.query("SELECT d.name, price, type, park_id FROM Dining_offer d, FastFood f WHERE d.name=f.name AND park_id =$1 ORDER BY Price", [id]);
+    const { att1 } = req.params;
+    const allFastfood = await pool.query(`SELECT d.name, park_id, ${att1} FROM Dining_offer d, FastFood f WHERE d.name=f.name AND park_id = ${id} ORDER BY Price`);
     res.json(allFastfood.rows);
 };
 
@@ -33,6 +35,7 @@ const getHotel = async (req, res) => {
     const allHotel = await pool.query("SELECT address, brand, price, park_id FROM Hotel_LocatedNear ORDER BY Park_ID");
     res.json(allHotel.rows);
 };
+
 
 // STAFF VIEW
 // GET routes

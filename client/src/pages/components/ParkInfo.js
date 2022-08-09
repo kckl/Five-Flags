@@ -10,7 +10,6 @@ const ParkInfo = () => {
         const response = await fetch("http://localhost:8000/hours" + `/${id}`);
         const jsonData = await response.json();
 
-       // console.log(jsonData);
         setHours(jsonData);
     };
 

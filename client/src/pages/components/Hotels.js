@@ -6,11 +6,12 @@ const Hotels = () => {
 
     const [hotels, setHotels] = useState([]);
 
-    const getHotel = async(id) => {
+    const getHotel = async(col) => {
             const response = await fetch("http://localhost:8000/hotel");
             const jsonData = await response.json();
             setHotels(jsonData);
     };
+
 
     useEffect(() => {
         getHotel();
