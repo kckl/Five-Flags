@@ -85,7 +85,7 @@ const getRelaxingRide = async (req, res) => {
 };
 
 const getAverageThrill = async (req, res) => {
-    const averageThrill = await pool.query('SELECT ROUND(AVG(thrill_level) ,2) AS "roundedAvg" FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count;');
+    const averageThrill = await pool.query('SELECT ROUND(AVG(thrill_level) ,2) AS "roundedAvg" FROM (SELECT COUNT(thrill_level), thrill_level FROM ride_info GROUP BY thrill_level) AS count');
     res.json(averageThrill.rows);
 }
 
