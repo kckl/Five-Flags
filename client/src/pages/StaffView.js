@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './StaffView.css';
+import '../css/StaffView.css';
 import img from "../images/FiveFlags.png";
 
 // table components

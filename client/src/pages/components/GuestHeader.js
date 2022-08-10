@@ -1,5 +1,5 @@
 import React from "react";
-import './GuestHeader.css';
+import '../../css/GuestHeader.css';
 import img from "../../images/FiveFlags.png";
 import { Link } from "react-router-dom";
 

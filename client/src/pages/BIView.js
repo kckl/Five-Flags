@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './BIView.css';
+import '../css/BIView.css';
 import img from "../images/FiveFlags.png";
 
 

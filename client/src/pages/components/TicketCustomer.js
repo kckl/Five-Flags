@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './TicketCustomer.css';
 const ticketUrl = "http://localhost:8000/ticketsales/"
 
 

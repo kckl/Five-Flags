@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './Hotels.css';
 
 
 const Hotels = () => {

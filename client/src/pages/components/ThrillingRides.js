@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./ThrillingRides.css"
 const thrillUrl = "http://localhost:8000/thrillingride/"
 const relaxUrl = "http://localhost:8000/relaxingride/"
 const averageUrl = "http://localhost:8000/averagethrill"

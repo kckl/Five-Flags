@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import './AddOperations.css';
 const staffUrl = "http://localhost:8000/staff"
 const rideUrl = "http://localhost:8000/rides"
 const foodUrl = "http://localhost:8000/food"

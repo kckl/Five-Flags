@@ -1,5 +1,5 @@
 import React from "react";
-import './GuestView.css';
+import '../css/GuestView.css';
 
 import ParkInfo from "./components/ParkInfo";
 import GuestHeader from "./components/GuestHeader";

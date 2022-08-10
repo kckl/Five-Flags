@@ -1,5 +1,5 @@
 import React from "react";
-import './ThingsToDo.css';
+import '../css/ThingsToDo.css';
 
 import ShopsRides from "./components/ShopsRides";
 import GetDining from "./components/GetDining";

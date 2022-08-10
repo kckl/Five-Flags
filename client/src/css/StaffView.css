@@ -1,0 +1,147 @@
+.staff-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    text-align: left;
+    background: url("../images/WaltOpaque.png");
+    background-size: cover;
+    background-color: white;
+    background-attachment: fixed;
+}
+
+.welcome {
+    display: inline;
+}
+
+.header  {
+    margin: 30px 60px;
+}
+
+.small-logo {
+    position: relative;
+    top: -75px;
+    max-width: 80px;
+    max-height: 80px;
+    float: right;
+}
+
+p {
+    display: inline;
+}
+
+.bi {
+    margin: 30px 60px;
+    height: auto;
+    width: auto;
+    align-items: center;
+}
+
+.ops-box-container {
+    background-color: rgb(250, 250, 250);
+    opacity: 80%;
+    margin: 30px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    display: inline-table;
+}
+
+.left-text-container {
+    margin: 15px 30px;
+    align-items: center;
+    float: left;
+    width: 45%;
+}
+
+.right-text-container {
+    margin: 15px 30px;
+    align-items: center;
+    float: right;
+    width: 45%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0px;
+    table-layout: fixed;
+}
+
+table th {
+    background-color: rgb(31,74,126);
+    color: white;
+}
+
+table td, table th {
+    border: 1px solid rgb(90,90,90);
+    padding: 7px;
+}
+
+tbody tr:hover {
+    background-color: rgb(190,190,190);
+}
+
+#centercol {
+    text-align: center;
+}
+
+#deletePark {
+    background-color: #ffd1d2;
+}
+
+.box-container {
+    background-color: rgb(250, 250, 250);
+    opacity: 80%;
+    margin: 30px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.text-container {
+    margin: 30px 30px;
+    align-items: center;
+}
+
+label {
+    text-align: left;
+    display: inline; 
+}
+
+.formspace {
+    display: inline;
+    margin-left: 10px; 
+}
+
+input[type="text"] {
+    font-family: 'Exo', sans-serif;
+    width: 150px;
+}
+
+input[type="number"] {
+    font-family: 'Exo', sans-serif;
+    width: 150px;
+}
+
+input[type="submit"] {
+    font-family: 'Exo', sans-serif;
+    background-color: rgb(225, 225, 225);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+    float: right;
+    width: 100px;
+}

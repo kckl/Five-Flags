@@ -2,7 +2,6 @@
 // update operation - food establishments
 
 import React, { useEffect, useState } from "react";
-import './Operations.css';
 import EditFoods from "./EditFoods";
 
 const parksUrl = "http://localhost:8000/parks"

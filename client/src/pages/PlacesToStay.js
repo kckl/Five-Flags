@@ -1,5 +1,5 @@
 import React from "react";
-import './PlacesToStay.css';
+import '../css/PlacesToStay.css';
 
 import GuestHeader from "./components/GuestHeader";
 import Hotels from "./components/Hotels";

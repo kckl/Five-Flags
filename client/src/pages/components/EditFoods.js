@@ -1,6 +1,4 @@
 import React, { Fragment, useState } from "react";
-import './EditFoods.css'
-
 
 const EditFoods = ({foods}) => {
     const [name, setName] = useState(foods.name);

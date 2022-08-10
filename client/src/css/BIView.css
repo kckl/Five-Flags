@@ -1,0 +1,44 @@
+.bi-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    text-align: left;
+    background: url("../images/Uni.png");
+    background-size: cover;
+    background-color: white;
+    background-attachment: fixed;
+}
+
+
+#ticketcustomer {
+    margin: 10;
+    display: inline;
+  }
+  
+  
+  #loyaltyButton, #salesButton, #thrillingButton, #relaxingButton, #averageButton {
+      float: right;
+      height: 35px;
+      width: 150px;
+      font-family: 'Exo', sans-serif;
+      background-color: rgb(225, 225, 225);
+      border: 1px solid black;
+      text-align: center;
+      font-size: 15px;
+  }
+  
+  #definition {
+      font-style: italic;
+      display: block;
+  }
+
+  #thrilling {
+    margin: 10;
+    display: inline;
+}
+
+#thrill {
+    width:auto
+}
