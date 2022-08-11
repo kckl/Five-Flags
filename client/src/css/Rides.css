@@ -1,0 +1,32 @@
+.ride-box-container > img {
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+    display: inline-table;
+    border-radius: 8px;
+}
+
+.rides {
+    margin-left: 60px;
+}
+
+.ride-box-container {
+    background-color: rgb(250, 250, 250);
+    opacity: 80%;
+    margin: 30px;
+    margin-right: 10px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    display: inline-table;
+    flex-direction: column;
+}
+
+.ride-box-container > p {
+    display: block;
+    margin-left: 75px;
+}
