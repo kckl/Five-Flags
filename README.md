@@ -7,3 +7,8 @@ An amusement park web application for two user groups - guests and staff members
 
 ### Staff View
 <img width="1310" alt="Screen Shot 2022-08-16 at 12 56 55 AM" src="https://user-images.githubusercontent.com/85543667/184828023-e16b8d12-cecc-4cfa-a3c5-a1617eaf0854.png">
+
+
+### To start webapp:
+client: `npm start`
+server: `nodemon server`
